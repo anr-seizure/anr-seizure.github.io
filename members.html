@@ -1,4 +1,4 @@
----
+ity---
 layout: page
 title: Members
 order: 2
@@ -30,8 +30,8 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>   
-                 {%if item.status %}
-                   Status: {{ item.status }}
+                 {%if item.position %}
+                   Status: {{ item.position }}
                  {% endif %} </br>
 	    	 {%if item.interests %}
                    Interests: {{ item.interests }}
@@ -58,11 +58,11 @@ permalink: /members/
          <tr>
              <th>
                  <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
-                 {%if item.institution %}
-                  Institution: {{ item.institution }}
+                 {%if item.university %}
+                  Institution: {{ item.university }}
                  {% endif %} </br>   
-	    	 {%if item.status %}
-                  Status: {{ item.status }}
+	    	 {%if item.position %}
+                  Status: {{ item.position }}
                  {% endif %} </br>
 	    	 {%if item.interests %}
                   Interests: {{ item.interests }}
@@ -92,8 +92,8 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>
-	         {%if item.status %}
-                  Status: {{ item.status }}
+	         {%if item.position %}
+                  Status: {{ item.position }}
                  {% endif %} </br>
                  {%if item.interests %}
                    Interests: {{ item.interests }}
@@ -123,14 +123,11 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>
-                 {%if item.status %}
-                  Status: {{ item.status }}
+                 {%if item.position %}
+                  Status: {{ item.position }}
                  {% endif %} </br>
 	         {%if item.interests %}
                    Interests: {{ item.interests }}
-                 {% endif %} </br>
-	    	 {%if item.status %}
-                  Status: {{ item.status }}
                  {% endif %} </br>
 		 {%if item.url %}
                   <a href="{{item.url}}" target="_blank">Web site</a>
