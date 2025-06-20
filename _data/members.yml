@@ -80,8 +80,8 @@ ENSL:
     picture: 'pBorgnat.jpg'
     interests: "Graph signal processing"
     url: "https://perso.ens-lyon.fr/pierre.borgnat/"
-
- - firstname: 'Paulo'
+    
+  - firstname: 'Paulo'
     lastname: 'Goncalves'
     university: 'ENS Lyon and INRIA, OCKAM project'
     status: 'INRIA Research Director'
