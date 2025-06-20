@@ -30,10 +30,12 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>   
-                   <!--<a href="https://creatis-myriad.github.io/search/?query={{ item.firstname }}+{{ item.lastname }}">Posts</a> -->
-                    {%if item.interests %}
-                        Interests: {{ item.interests }}
-                    {% endif %} </br>
+                 {%if item.status %}
+                   Status: {{ item.status }}
+                 {% endif %} </br>
+	    	 {%if item.interests %}
+                   Interests: {{ item.interests }}
+                 {% endif %} </br>
                  {%if item.url %}
                   <a href="{{item.url}}" target="_blank">Web site</a>
                  {% endif %}                    
@@ -59,11 +61,11 @@ permalink: /members/
                  {%if item.institution %}
                   Institution: {{ item.institution }}
                  {% endif %} </br>   
-                 {%if item.interests %}
-                  Interests: {{ item.interests }}
-                 {% endif %} </br>
 	    	 {%if item.status %}
                   Status: {{ item.status }}
+                 {% endif %} </br>
+	    	 {%if item.interests %}
+                  Interests: {{ item.interests }}
                  {% endif %} </br>
                  {%if item.url %}
                   <a href="{{item.url}}" target="_blank">Web site</a>
@@ -90,11 +92,11 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>
+	         {%if item.status %}
+                  Status: {{ item.status }}
+                 {% endif %} </br>
                  {%if item.interests %}
                    Interests: {{ item.interests }}
-                 {% endif %} </br>
-	    	 {%if item.status %}
-                  Status: {{ item.status }}
                  {% endif %} </br>
 		 {%if item.url %}
                   <a href="{{item.url}}" target="_blank">Web site</a>
@@ -121,7 +123,10 @@ permalink: /members/
                  {%if item.university %}
                   Institution: {{ item.university }}
                  {% endif %} </br>
-                 {%if item.interests %}
+                 {%if item.status %}
+                  Status: {{ item.status }}
+                 {% endif %} </br>
+	         {%if item.interests %}
                    Interests: {{ item.interests }}
                  {% endif %} </br>
 	    	 {%if item.status %}
