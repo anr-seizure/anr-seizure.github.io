@@ -21,7 +21,7 @@
 title: SEIZURE
 # email: your-email@example.com
 description: > # this means to ignore newlines until "baseurl:"
-  Website of the SEIZURE project (Prediction of the origin of cardiac pathologies)
+  Website of the SEIZURE project
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://anr-seizure.github.io/  # the base hostname and protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -63,5 +63,5 @@ exclude:
 
 collections_dir: collections
 collections:
-   tutorials:
+   posts:
      output: true
