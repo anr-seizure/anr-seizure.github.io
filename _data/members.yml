@@ -1,0 +1,89 @@
+####Template#####
+#- firstname: 'First Name'
+#  lastname: 'Last Name'
+#  picture: 'name of picture file in members/'
+#  interests: "Short text indicating current interests."
+#  status: 'professional status, Md PhD, Research Director, PhD student'
+#  grades: % List of grades
+#    - grade:
+#      name: PhD
+#      startyear: 2020
+#      endyear:  '' % Empty string to indicate ongoing (will add '-' to page)
+
+member_list_title: Members
+
+CREATIS:
+
+  - firstname: 'Carole'
+    lastname: 'Lartizien'
+    university: 'CNRS, University of Lyon, CREATIS lab; MYRIAD team'
+    status: 'CNRS Research Director'
+    picture: 'cLartizien.jpg'
+    interests: "medical image analysis, deep learning, neuroimage analysis,"
+    url: "https://www.creatis.insa-lyon.fr/~lartizien/"
+    
+  - firstname: 'Robin'
+    lastname: 'Trombetta'
+    university: 'INSA Lyon, University of Lyon, CREATIS lab; MYRIAD team'
+    status: 'PhD student'
+    picture: 'rTrombetta.jpg'
+    interests: "medical image analysis, deep learning, neuroimage analysis,"    
+
+CRNL:
+
+  - firstname: 'Romain'
+    lastname: 'Quentin'
+    university: 'INSERM, University of Lyon, CRNL; EDUWELL team '
+    status: 'INSERM Research Associate'
+    picture: 'rQuentin.jpg'
+    interests: "computational neuroscience, machine learning, MEG"
+    
+  - firstname: 'Pauline'
+    lastname: 'Mouches'
+    university: 'INSERM, University of Lyon, CRNL; EDUWELL team '
+    status: 'Post-doctoral fellow'
+    picture: 'pMouches.jpg'
+    interests: "machine learning, MEG and MRI, neuroimage analysis"
+
+  - firstname: 'Romain'
+    lastname: 'Bouet'
+    university: 'INSERM, University of Lyon, CRNL; EDUWELL team '
+    status: 'INSERM Research Engineer'
+    picture: 'rBouet.jpg'
+    interests: "MEG and MRI, neuroimage analysis"
+    
+HCL:
+
+  - firstname: 'Julien'
+    lastname: 'jung'
+    university: 'Lyon University Hospital and CRNL'
+    picture: 'jJung.jpg'
+    status: 'Neurologist'
+    interests: "epilepsy, MEG"
+
+  - firstname: 'Claire'
+    lastname: 'Haegelen'
+    university: 'Lyon University Hospital and CRNL'
+    picture: 'cHaegelen.jpg'
+    status: 'Neurosurgeon'
+    interests: "epilepsy, MRI"
+     
+                
+ENSL:
+
+  - firstname: 'Pierre'
+    lastname: 'Borgnat'
+    university: 'ENS Lyon, Physic lab, Sisyphe team'
+    status: 'CNRS Research Director'
+    picture: 'pBorgnat.jpg'
+    interests: "Graph signal processing"
+    url: "https://perso.ens-lyon.fr/pierre.borgnat/"
+
+ - firstname: 'Paulo'
+    lastname: 'Goncalves'
+    university: 'ENS Lyon and INRIA, OCKAM project'
+    status: 'INRIA Research Director'
+    picture: 'pGoncalves.jpg'
+    interests: "Signal Processing applied to Networks"
+    url: "https://perso.ens-lyon.fr/paulo.goncalves/"
+

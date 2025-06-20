@@ -1,0 +1,30 @@
+---
+layout: default
+title:  Overview
+order: 1
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Project Overview</h1>
+
+  <img src="images/SEIZURE_illustrations.jpg" width="400" class="center" />
+  
+  
+  
+  <ul class="post-list">
+    {% assign sortedTutorials = site.tutorials | date_sort | reverse %}
+    {% for tutorial in sortedTutorials %}
+      <li>
+        <span class="post-meta">{{ tutorial.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ tutorial.url | relative_url }}">{{ tutorial.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>

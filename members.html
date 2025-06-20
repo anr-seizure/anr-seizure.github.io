@@ -1,0 +1,217 @@
+---
+layout: page
+title: Members
+order: 2
+permalink: /members/
+---
+<style>
+    /* TODO: Add styling to list with li */
+    img {
+	width: 150px;
+	height: auto;
+    }
+	th {
+	  width: 78%;
+	}
+    span.weak {
+    font-weight: lighter;
+}
+</style>
+
+<div class="entry-content">
+
+  <h1>CREATIS</h1>
+
+    <table>
+        {% for item in site.data.members.CREATIS %}
+         <tr>
+             <th>
+                 <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.university %}
+                  Institution: {{ item.university }}
+                 {% endif %} </br>   
+                   <!--<a href="https://creatis-myriad.github.io/search/?query={{ item.firstname }}+{{ item.lastname }}">Posts</a> -->
+                    {%if item.interests %}
+                        Interests: {{ item.interests }}
+                    {% endif %} </br>
+                 {%if item.url %}
+                  <a href="{{item.url}}" target="_blank">Web site</a>
+                 {% endif %}                    
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{item.picture}}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>
+
+
+  <h1>CRNL</h1>
+
+    <table>
+        {% for item in site.data.members.CRNL %}
+         <tr>
+             <th>
+                 <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.institution %}
+                  Institution: {{ item.institution }}
+                 {% endif %} </br>   
+                 {%if item.interests %}
+                  Interests: {{ item.interests }}
+                 {% endif %} </br>
+	    	 {%if item.status %}
+                  Status: {{ item.status }}
+                 {% endif %} </br>
+                 {%if item.url %}
+                  <a href="{{item.url}}" target="_blank">Web site</a>
+                 {% endif %}                 
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{item.picture}}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>
+
+
+  <h1>HCL</h1>
+
+    <table>
+        {% for item in site.data.members.HCL %}
+         <tr>
+             <th>
+                 <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.university %}
+                  Institution: {{ item.university }}
+                 {% endif %} </br>
+                 {%if item.interests %}
+                   Interests: {{ item.interests }}
+                 {% endif %} </br>
+	    	 {%if item.status %}
+                  Status: {{ item.status }}
+                 {% endif %} </br>
+		 {%if item.url %}
+                  <a href="{{item.url}}" target="_blank">Web site</a>
+                 {% endif %}
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{item.picture}}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>
+    
+    
+  <h1>ENSL</h1>
+
+    <table>
+        {% for item in site.data.members.ENSL %}
+         <tr>
+             <th>
+                  <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.university %}
+                  Institution: {{ item.university }}
+                 {% endif %} </br>
+                 {%if item.interests %}
+                   Interests: {{ item.interests }}
+                 {% endif %} </br>
+	    	 {%if item.status %}
+                  Status: {{ item.status }}
+                 {% endif %} </br>
+		 {%if item.url %}
+                  <a href="{{item.url}}" target="_blank">Web site</a>
+                 {% endif %}
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{item.picture}}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>    
+    
+    
+ 
+
+<!--
+
+  <h1>PhD</h1>
+
+    <table>
+        {% for item in site.data.members.phd %}
+         <tr>
+             <th>
+                 <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.institution %}
+                  Institution: {{ item.institution }}
+                 {% endif %} </br>
+                 {%if item.supervisors %}
+                  Supervisor(s): {{ item.supervisors }}
+                 {% endif %} </br>                 
+		 {%if item.subject %}
+                 {%if item.interests %}
+                  Interests: {{ item.interests }}
+                 {% endif %}
+                 </br></br>                 
+		  Subject: <em>{{ item.subject }}</em>
+		 {% endif %}
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{ item.picture }}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>
+    
+  <h1>Postdoc</h1>
+
+    <table>
+        {% for item in site.data.members.postdoc %}
+         <tr>
+             <th>
+                 <strong>{{ item.firstname }} {{ item.lastname }}  </strong> </br>
+                 {%if item.institution %}
+                  Institution: {{ item.institution }}
+                 {% endif %} </br>
+                 {%if item.supervisors %}
+                  Supervisor(s): {{ item.supervisors }}
+                 {% endif %} </br>                 
+		 {%if item.subject %}
+                 {%if item.interests %}
+                  Interests: {{ item.interests }}
+                 {% endif %}
+                 </br></br>                 
+		  Subject: <em>{{ item.subject }}</em>
+		 {% endif %}                 
+             </th>
+              <th>
+                  {%if item.picture %}
+                    <img src={{ item.picture }}>
+                  {% endif %}
+              </th>
+         </tr>
+       {% endfor %}
+
+    </table>    
+ 
+-->         
+    
+</div>
+
+
+
+
