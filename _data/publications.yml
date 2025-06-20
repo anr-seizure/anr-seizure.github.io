@@ -14,9 +14,5 @@ conference:
 
   - authors: 'Robin Trombetta, Pierre Falconnier, Carole Lartizien'
     year: 2025
-    title: 'Étude comparative d'encodeurs génériques pour la vision ou spécifiques à l'imagerie médicale pour l'extraction de caractéristiques sur des données 3D cérébrales multimodales'
-    conference: 3eme Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale (IABM 2025)
-    doi: https://arxiv.org/pdf/2406.17902                                                                 
-
-
-   
+    title: 'Etude comparative d encodeurs génériques pour la vision ou spécifiques à l imagerie médicale pour l extraction de caractéristiques sur des données 3D cérébrales multimodales'
+    conference: 3eme Colloque Français d Intelligence Artificielle en Imagerie Biomédicale (IABM 2025)
