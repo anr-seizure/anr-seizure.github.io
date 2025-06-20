@@ -1,29 +1,22 @@
 journal_list_title: Journal papers
 journal:
                                                                         
-  - authors: 'H.J. Ling, S. Bru, J. Puig, F. Vixège, S. Mendez, F. Nicoud, P.Y. Courand, O. Bernard and D. Garcia'
-    year: 2024
-    title: 'Physics-Guided Neural Networks for Intraventricular Vector Flow Mapping'
-    journal: IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control
+  - authors: 'D Zotova, N Pinon, R Trombetta, R Bouet, J Jung and C Lartizien'
+    year: 2025
+    title: 'GAN-based synthetic FDG PET images from T1 brain MRI can serve to improve performance of deep unsupervised anomaly detection models'
+    journal: Computer Methods and Programs in Biomedicine
     pages : early access
-    doi: https://arxiv.org/abs/2403.13040
+    doi: https://arxiv.org/pdf/2505.07364?
 
 
 conference_list_title: Conference proceedings
 conference:
 
-  - authors: 'A. Judge, T. Judge, N. Duchateau, R.A. Sandler, J.Z. Sokol, O. Bernard and P.M. Jodoin'
-    year: 2024
-    title: 'Domain Adaptation of Echocardiography Segmentation Via Reinforcement Learning'
-    conference: in the 27th international conference on Medical Image Computing and Computer Assisted Intervention (MICCAI'24)
-    doi: https://arxiv.org/pdf/2406.17902                                                                     
-
-
-  - authors: 'H.J. Ling, N. Painchaud, P.Y. Courand, P.M. Jodoin, D. Garcia and O. Bernard'
-    year: 2023
-    title: 'Extraction of volumetric indices from echocardiography: which deep learning solution for clinical use?'
-    conference: in the 12th international conference on Functional Imaging and Modeling of the Heart (FIMH'23)
-    doi: https://arxiv.org/abs/2305.01997                                                                       
+  - authors: 'Robin Trombetta, Pierre Falconnier, Carole Lartizien'
+    year: 2025
+    title: 'Étude comparative d'encodeurs génériques pour la vision ou spécifiques à l'imagerie médicale pour l'extraction de caractéristiques sur des données 3D cérébrales multimodales'
+    conference: 3eme Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale (IABM 2025)
+    doi: https://arxiv.org/pdf/2406.17902                                                                 
 
 
    
