@@ -3,7 +3,7 @@
 #  lastname: 'Last Name'
 #  picture: 'name of picture file in members/'
 #  interests: "Short text indicating current interests."
-#  status: 'professional status'
+#  position: 'professional position'
 #  grades: % List of grades
 #    - grade:
 #      name: PhD
@@ -17,7 +17,7 @@ CREATIS:
   - firstname: 'Carole'
     lastname: 'Lartizien'
     university: 'CNRS, University of Lyon, CREATIS lab; MYRIAD team'
-    status: 'CNRS Research Director'
+    position: 'CNRS Research Director'
     picture: 'cLartizien.jpg'
     interests: "medical image analysis, deep learning, neuroimage analysis"
     url: "https://www.creatis.insa-lyon.fr/~lartizien/"
@@ -35,21 +35,21 @@ CRNL:
   - firstname: 'Romain'
     lastname: 'Quentin'
     university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    status: 'INSERM Research Associate'
+    position: 'INSERM Research Associate'
     picture: 'rQuentin.jpg'
     interests: "computational neuroscience, machine learning, MEG"
     
   - firstname: 'Pauline'
     lastname: 'Mouches'
     university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    status: 'Post-doctoral fellow'
+    position: 'Post-doctoral fellow'
     picture: 'pMouches.jpg'
     interests: "machine learning, MEG and MRI, neuroimage analysis"
 
   - firstname: 'Romain'
     lastname: 'Bouet'
     university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    status: 'INSERM Research Engineer'
+    position: 'INSERM Research Engineer'
     picture: 'rBouet.jpg'
     interests: "MEG and MRI, neuroimage analysis"
     
@@ -60,7 +60,7 @@ HCL:
     lastname: 'Jung'
     university: 'Lyon University Hospital and CRNL'
     picture: 'jJung.jpg'
-    status: 'Neurologist'
+    position: 'Neurologist'
     interests: "epilepsy, MEG"
 
   - firstname: 'Claire'
