@@ -1,0 +1,27 @@
+# Home page news feed, newest first.
+#
+# Fields:
+#   date   YYYY-MM-DD
+#   title  short headline
+#   blurb  one sentence
+#   tag    a category label: Publication | Hiring | Milestone | Event
+#   url    where the item links (internal path or external url)
+
+news:
+  - date: "2025-06-01"
+    title: "We are hiring a Master intern"
+    blurb: "Spherical deep learning for epileptogenic zone localization, in WP4 at CREATIS."
+    tag: Hiring
+    url: "/positions/"
+
+  - date: "2025-05-01"
+    title: "New article in Computer Methods and Programs in Biomedicine"
+    blurb: "GAN based synthetic FDG PET from T1 MRI improves unsupervised anomaly detection."
+    tag: Publication
+    url: "https://doi.org/10.1016/j.cmpb.2025.108727"
+
+  - date: "2024-12-01"
+    title: "SEIZURE kicks off"
+    blurb: "Funded by the ANR for 48 months, coordinated by CREATIS with CRNL, ENS de Lyon and HCL."
+    tag: Milestone
+    url: "/overview/"

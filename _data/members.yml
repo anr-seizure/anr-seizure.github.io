@@ -1,91 +1,138 @@
-####Template#####
-#- firstname: 'First Name'
-#  lastname: 'Last Name'
-#  picture: 'name of picture file in members/'
-#  interests: "Short text indicating current interests."
-#  position: 'professional position'
-#  grades: % List of grades
-#    - grade:
-#      name: PhD
-#      startyear: 2020
-#      endyear:  '' % Empty string to indicate ongoing (will add '-' to page)
+# Project members, grouped by host institution. Cards render from this file.
+#
+# Fields (all optional except firstname/lastname):
+#   key         short unique id, also used to attach auto fetched publications (member_pubs.yml)
+#   role        short role label shown as a badge (PI, PhD student, Postdoc, Engineer, Clinician, ...)
+#   lead        true to mark a principal investigator (sorted first, highlighted)
+#   institutions list of institution keys from institutions.yml (first is the primary chip)
+#   picture     file in members/
+#   interests   short comma separated list
+#   thesis      for PhD students: { title, supervisors, start }
+#   idhal       HAL author id in slug form (used to fetch publications and link the HAL CV)
+#   idhal_numeric HAL numeric author id, used when no slug idHAL exists
+#   orcid       ORCID id (0000-0000-0000-0000)
+#   thesesfr    theses.fr url
+#   website     personal or professional homepage
+#
+# Publications are fetched automatically from HAL by scripts/fetch_hal.py into member_pubs.yml;
+# you never edit that file by hand.
 
 member_list_title: Members
 
 CREATIS:
-
   - firstname: 'Carole'
     lastname: 'Lartizien'
-    university: 'CNRS, University of Lyon, CREATIS lab; MYRIAD team'
-    position: 'CNRS Research Director'
+    key: lartizien
+    role: 'CNRS Research Director'
+    lead: true
+    coordinator: true
+    institutions: [creatis, cnrs]
     picture: 'cLartizien.jpg'
-    interests: "medical image analysis, deep learning, neuroimage analysis"
-    url: "https://www.creatis.insa-lyon.fr/~lartizien/"
-    
+    interests: "medical image analysis, deep learning, neuroimaging"
+    idhal: "carole-lartizien"
+    idhal_numeric: "19883"
+    orcid: "0000-0001-7594-4231"
+    website: "https://www.creatis.insa-lyon.fr/~lartizien/"
+
   - firstname: 'Robin'
     lastname: 'Trombetta'
-    university: 'INSA Lyon, University of Lyon, CREATIS lab; MYRIAD team'
-    status: 'PhD student'
+    key: trombetta
+    role: 'PhD student'
+    institutions: [creatis, insa]
     picture: 'rTrombetta.jpg'
-    interests: "medical image analysis, deep learning, neuroimage analysis"    
-    
+    interests: "medical image analysis, deep learning, neuroimaging"
+    thesis:
+      title: "Weakly supervised deep learning and fusion of heterogeneous multimodal image and non-image data for diagnosis and prognosis of brain pathologies"
+      supervisors: "Carole Lartizien"
+      start: 2023
+    idhal: "robin-trombetta"
+    idhal_numeric: "1320834"
+    orcid: "0009-0001-7945-6953"
+    thesesfr: "https://theses.fr/s414422"
 
 CRNL:
-
   - firstname: 'Romain'
     lastname: 'Quentin'
-    university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    position: 'INSERM Research Associate'
+    key: quentin
+    role: 'INSERM Research Associate'
+    lead: true
+    institutions: [crnl, inserm]
     picture: 'rQuentin.jpg'
     interests: "computational neuroscience, machine learning, MEG"
-    
-  - firstname: 'Pauline'
-    lastname: 'Mouches'
-    university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    position: 'Post-doctoral fellow'
-    picture: 'pMouches.jpg'
-    interests: "machine learning, MEG and MRI, neuroimage analysis"
+    idhal: "romain-quentin"
+    idhal_numeric: "753802"
+    orcid: "0000-0001-7659-3605"
+    website: "http://romainquentin.fr/"
 
   - firstname: 'Romain'
     lastname: 'Bouet'
-    university: 'INSERM, University of Lyon, CRNL; EDUWELL team'
-    position: 'INSERM Research Engineer'
+    key: bouet
+    role: 'Research Engineer'
+    institutions: [crnl, inserm]
     picture: 'rBouet.jpg'
-    interests: "MEG and MRI, neuroimage analysis"
-    
-    
-HCL:
+    interests: "MEG, MRI, neuroimaging"
+    idhal: "romain-bouet"
+    idhal_numeric: "761121"
+    orcid: "0000-0002-3690-2976"
+    website: "https://cv.hal.science/romain-bouet"
 
+  - firstname: 'Pauline'
+    lastname: 'Mouches'
+    key: mouches
+    role: 'Post-doctoral fellow'
+    institutions: [crnl, inserm]
+    picture: 'pMouches.jpg'
+    interests: "machine learning, MEG and MRI, neuroimaging"
+    idhal_numeric: "1219214"
+    orcid: "0000-0002-0304-5584"
+    website: "https://www.crnl.fr/en/user/936"
+
+HCL:
   - firstname: 'Julien'
     lastname: 'Jung'
-    university: 'Lyon University Hospital and CRNL'
+    key: jung
+    role: 'Neurologist'
+    lead: true
+    colead: true
+    institutions: [hcl, crnl]
     picture: 'jJung.jpg'
-    position: 'Neurologist'
-    interests: "epilepsy, MEG"
+    interests: "epilepsy, MEG, presurgical evaluation"
+    idhal_numeric: "1221187"
+    orcid: "0000-0002-9274-0086"
 
   - firstname: 'Claire'
     lastname: 'Haegelen'
-    university: 'Lyon University Hospital and CRNL'
+    key: haegelen
+    role: 'Neurosurgeon'
+    institutions: [hcl, crnl]
     picture: 'cHaegelen.jpg'
-    status: 'Neurosurgeon'
-    interests: "epilepsy, MRI" 
-    
-                
-ENSL:
+    interests: "epilepsy surgery, MRI"
+    idhal_numeric: "197691"
+    orcid: "0000-0002-8341-4887"
+    website: "https://institut-pierre-wertheimer.fr/en/project/en-pr-claire-haegelen/"
 
+ENSL:
   - firstname: 'Pierre'
     lastname: 'Borgnat'
-    university: 'ENS Lyon, Physic lab, Sisyphe team'
-    status: 'CNRS Research Director'
+    key: borgnat
+    role: 'CNRS Research Director'
+    lead: true
+    institutions: [ensl, cnrs]
     picture: 'pBorgnat.jpg'
-    interests: "Graph signal processing"
-    url: "https://perso.ens-lyon.fr/pierre.borgnat/"
-    
-  - firstname: 'Paulo'
-    lastname: 'Goncalves'
-    university: 'ENS Lyon and INRIA, OCKAM project'
-    status: 'INRIA Research Director'
-    picture: 'pGoncalves.jpg'
-    interests: "Signal Processing applied to Networks"
-    url: "https://perso.ens-lyon.fr/paulo.goncalves/"
+    interests: "graph signal processing"
+    idhal: "pierre-borgnat"
+    orcid: "0000-0003-4536-8354"
+    website: "https://perso.ens-lyon.fr/pierre.borgnat/"
 
+  - firstname: 'Paulo'
+    lastname: 'Gonçalves'
+    key: goncalves
+    role: 'Inria Research Director'
+    lead: true
+    institutions: [ensl, inria]
+    picture: 'pGoncalves.jpg'
+    interests: "signal processing on networks and graphs"
+    idhal: "paulo-goncalves"
+    idhal_numeric: "6491"
+    orcid: "0000-0002-1781-6159"
+    website: "http://perso.ens-lyon.fr/paulo.goncalves/"

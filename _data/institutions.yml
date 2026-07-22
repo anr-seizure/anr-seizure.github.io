@@ -1,0 +1,66 @@
+# Institution branding. `color` drives chips and accents; `logo` is a self hosted file in assets/logos/.
+# To add a member from a new institution, add an entry here and reference its key in members.yml.
+# Colors were sampled from each institution's official logo or site (see the SEIZURE overhaul notes).
+
+creatis:
+  name: "CREATIS"
+  full: "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé"
+  color: "#0095d6"
+  logo: "/assets/logos/creatis.png"
+  url: "https://www.creatis.insa-lyon.fr/"
+
+crnl:
+  name: "CRNL"
+  full: "Centre de Recherche en Neurosciences de Lyon"
+  color: "#134ab1"
+  logo: "/assets/logos/crnl.png"
+  url: "https://www.crnl.fr/"
+
+hcl:
+  name: "HCL"
+  full: "Hospices Civils de Lyon"
+  color: "#00ade9"
+  logo: "/assets/logos/hcl.svg"
+  url: "https://www.chu-lyon.fr/"
+
+ensl:
+  name: "ENS de Lyon"
+  full: "École Normale Supérieure de Lyon, Laboratoire de Physique"
+  color: "#02008f"
+  logo: "/assets/logos/ensl.svg"
+  url: "https://www.ens-lyon.fr/"
+
+anr:
+  name: "ANR"
+  full: "Agence Nationale de la Recherche"
+  color: "#4162ff"
+  logo: "/assets/logos/anr.svg"
+  url: "https://anr.fr/"
+
+cnrs:
+  name: "CNRS"
+  full: "Centre National de la Recherche Scientifique"
+  color: "#00294b"
+  logo: "/assets/logos/cnrs.svg"
+  url: "https://www.cnrs.fr/"
+
+inserm:
+  name: "Inserm"
+  full: "Institut National de la Santé et de la Recherche Médicale"
+  color: "#e64415"
+  logo: "/assets/logos/inserm.svg"
+  url: "https://www.inserm.fr/"
+
+inria:
+  name: "Inria"
+  full: "Institut National de Recherche en Sciences et Technologies du Numérique"
+  color: "#c9191e"
+  logo: "/assets/logos/inria.svg"
+  url: "https://www.inria.fr/"
+
+insa:
+  name: "INSA Lyon"
+  full: "Institut National des Sciences Appliquées de Lyon"
+  color: "#ee2922"
+  logo: "/assets/logos/insa.svg"
+  url: "https://www.insa-lyon.fr/"

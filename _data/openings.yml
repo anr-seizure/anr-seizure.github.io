@@ -1,0 +1,31 @@
+# Open positions. Cards render from this file, newest first.
+#
+# Fields:
+#   title      position title
+#   level      Master | PhD | Postdoc | Engineer   (drives the colored badge)
+#   wp         related work package, e.g. WP4  (optional)
+#   lab        institution key from institutions.yml (drives the lab chip)
+#   location   where the work happens
+#   duration   contract length
+#   start      expected start
+#   deadline   application deadline as YYYY-MM-DD, or "" if rolling
+#   status     open | closed | auto   (auto compares deadline to today)
+#   summary    one or two sentences on the topic
+#   profile    desired background
+#   contact    email address
+#   apply_url  link to the full offer
+
+openings:
+  - title: "Spherical deep learning models for epileptogenic zone localization"
+    level: Master
+    wp: WP4
+    lab: creatis
+    location: "CREATIS, INSA Lyon (Villeurbanne)"
+    duration: "5 to 6 months"
+    start: "Spring 2026"
+    deadline: ""
+    status: open
+    summary: "Design spherical convolutional networks that localize the epileptogenic zone from surface projected multimodal neuroimaging."
+    profile: "Master student in machine learning or medical image analysis, comfortable with Python and deep learning."
+    contact: "carole.lartizien@creatis.insa-lyon.fr"
+    apply_url: "https://www.creatis.insa-lyon.fr/site/fr/recrutement/spherical-deep-learning-models-epileptogenic-zone-localization"

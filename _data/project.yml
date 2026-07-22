@@ -1,0 +1,51 @@
+# Central project facts. Edit here to update the home hero, overview header and footer.
+# Everything below is plain data, no code. Change a value, rebuild, done.
+
+title_short: SEIZURE
+# The acrostic expands the acronym (capitals spell SEIZURE).
+acrostic:
+  - { cap: S, rest: eeing the }
+  - { cap: E, rest: pileptogenic }
+  - { cap: I, rest: '' }
+  - { cap: Z, rest: one through machine }
+  - { cap: '', rest: 'Learning on str' }
+  - { cap: U, rest: ct }
+  - { cap: R, rest: al and functional n }
+  - { cap: E, rest: uroimaging data }
+title_long: "Seeing the Epileptogenic Zone through machine Learning on strUctuRal and functional nEuroimaging data"
+tagline: "Fusing MRI, PET and MEG with machine learning to localize the epileptogenic zone in drug-resistant epilepsy and predict surgical outcome."
+lead_in: "A transdisciplinary ANR research project bringing statistical machine learning to epilepsy neuroimaging."
+
+acronym: SEIZURE
+anr_ref: ANR-24-CE45-4399
+panel: "CE45"
+panel_long: "CE45, Mathematics and Digital sciences for Biology and Health"
+coordinator: { name: "Carole Lartizien", lab: creatis, url: "https://www.creatis.insa-lyon.fr/~lartizien/" }
+colead: { name: "Julien Jung", lab: hcl }
+start: "2024-12"
+end: "2028-11"
+start_label: "Dec 2024"
+end_label: "Nov 2028"
+months: 48
+budget_eur: 561913
+patients: 200
+anr_url: "https://anr.fr/Projet-ANR-24-CE45-4399"
+hal_url: "https://anr.hal.science/search/index/?q=*&anrProjectReference_s=ANR-24-CE45-4399"
+contact_email: "carole.lartizien@creatis.insa-lyon.fr"
+
+# Logos shown in the home hero and footer partner strip (keys reference institutions.yml).
+partners: [anr, cnrs, inserm, insa, ensl, inria, hcl]
+
+# Work packages, shown as color coded cards on the overview page.
+# color is a semantic accent; lead is free text.
+work_packages:
+  - { id: WP0, title: "Project management", lead: "C. Lartizien, J. Jung", color: "#5b6072",
+      goal: "Coordinate the consortium and the shared multimodal database." }
+  - { id: WP1, title: "Database collection", lead: "J. Jung (HCL)", color: "#8a1c3b",
+      goal: "Assemble a curated multimodal cohort of more than 200 patients across MRI, PET, MEG and clinical data." }
+  - { id: WP2, title: "EZ localization with MRI and PET", lead: "C. Lartizien (CREATIS)", color: "#e08a2b",
+      goal: "Detect and phenotype subtle epileptogenic lesions from structural and metabolic imaging." }
+  - { id: WP3, title: "EZ localization with MEG", lead: "R. Quentin (CRNL), P. Borgnat (ENS de Lyon)", color: "#2f6db5",
+      goal: "Detect interictal spikes and map spike propagation with graph signal processing." }
+  - { id: WP4, title: "Multimodal fusion and outcome prediction", lead: "C. Lartizien (CREATIS)", color: "#1f9e6b",
+      goal: "Fuse the modalities to localize the EZ and predict surgical outcome." }
