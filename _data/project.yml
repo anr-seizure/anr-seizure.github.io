@@ -2,16 +2,15 @@
 # Everything below is plain data, no code. Change a value, rebuild, done.
 
 title_short: SEIZURE
-# The acrostic expands the acronym (capitals spell SEIZURE).
+# The acrostic expands the acronym (highlighted capitals spell S E I Z U R E).
 acrostic:
-  - { cap: S, rest: eeing the }
-  - { cap: E, rest: pileptogenic }
-  - { cap: I, rest: '' }
-  - { cap: Z, rest: one through machine }
-  - { cap: '', rest: 'Learning on str' }
-  - { cap: U, rest: ct }
-  - { cap: R, rest: al and functional n }
-  - { cap: E, rest: uroimaging data }
+  - { cap: S, rest: "eeing the " }
+  - { cap: E, rest: "pileptogen" }
+  - { cap: I, rest: "c " }
+  - { cap: Z, rest: "one through machine Learning on str" }
+  - { cap: U, rest: "ctu" }
+  - { cap: R, rest: "al and functional n" }
+  - { cap: E, rest: "uroimaging data" }
 title_long: "Seeing the Epileptogenic Zone through machine Learning on strUctuRal and functional nEuroimaging data"
 tagline: "Fusing MRI, PET and MEG with machine learning to localize the epileptogenic zone in drug-resistant epilepsy and predict surgical outcome."
 lead_in: "A transdisciplinary ANR research project bringing statistical machine learning to epilepsy neuroimaging."

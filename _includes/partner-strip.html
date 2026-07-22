@@ -1,0 +1,12 @@
+{%- comment -%} Renders partner logos on light tiles. Params: keys (list), size ("sm" optional). {%- endcomment -%}
+{%- assign insts = site.data.institutions -%}
+<div class="partner-strip{% if include.size == 'sm' %} partner-strip--sm{% endif %}">
+  {%- for key in include.keys -%}
+    {%- assign inst = insts[key] -%}
+    {%- if inst -%}
+      <a class="partner-tile" href="{{ inst.url }}" target="_blank" rel="noopener" title="{{ inst.full | default: inst.name }}">
+        <img src="{{ inst.logo | relative_url }}" alt="{{ inst.name }}" loading="lazy">
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

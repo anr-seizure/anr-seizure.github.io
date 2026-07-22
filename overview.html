@@ -1,16 +1,65 @@
 ---
-layout: default
-title:  Overview
+layout: page
+title: Project overview
+eyebrow: What SEIZURE does
+intro: "Fusing structural, metabolic and electrophysiological brain data with machine learning to find the epileptogenic zone and predict surgical outcome."
+permalink: /overview/
 order: 1
 ---
+{%- assign p = site.data.project -%}
 
-<div class="home">
+<figure class="figure-hero">
+  <img src="{{ '/images/SEIZURE_graphical_abstract.jpg' | relative_url }}" alt="SEIZURE work package diagram. A shared multimodal database feeds three localization work packages, MRI and PET, MEG, and multimodal fusion, toward epileptogenic zone localization and surgical outcome prediction.">
+  <figcaption>The SEIZURE analysis framework, from the shared multimodal database to epileptogenic zone localization and outcome prediction.</figcaption>
+</figure>
 
-  <h1 class="page-heading">Project Overview</h1>
+<section class="section">
+  <p class="eyebrow">Work packages</p>
+  <div class="grid wp-grid">
+    {%- for w in p.work_packages -%}{% include wp-card.html item=w %}{%- endfor -%}
+  </div>
+</section>
 
-  <img src="images/SEIZURE_graphical_abstract.jpg" width="800" class="center" />
-  
+<section class="split">
+  <div class="prose">
+    <p class="eyebrow">The challenge</p>
+    <h2>Pinpointing the epileptogenic zone</h2>
+    <p>Epilepsy resists drug treatment in roughly 30% of patients. For them, surgically removing the epileptogenic zone (EZ) is the best option, yet no single biomarker pinpoints it and predicting surgical outcome stays hard.</p>
+    <p>MRI and PET expose subtle structural and metabolic lesions, while MEG records the brief electrophysiological events that travel through the epileptic network. These anatomical and functional views have largely evolved in parallel, and epileptologists still combine them by hand.</p>
+  </div>
+  <figure class="figure-hero">
+    <img src="{{ '/images/SEIZURE_illustrations.jpg' | relative_url }}" alt="MRI (structural), PET (metabolic) and MEG (electrophysiological) images converging through a neural network toward the epileptogenic zone shown on a brain.">
+  </figure>
+</section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+<section class="split section">
+  <div class="prose">
+    <p class="eyebrow">Our approach</p>
+    <h2>Statistical machine learning across modalities</h2>
+    <p>SEIZURE builds a statistical analysis framework that fuses multiparametric MRI, PET, MEG and clinical data to localize the EZ and predict surgical outcome. It draws on advanced machine learning for image and graph signal processing and for combining heterogeneous data.</p>
+    <p>Our hypothesis is that this integrated, transdisciplinary approach can deliver a step change in diagnostic performance, built on a multimodal database of more than 200 patients already collected by the clinical partner.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat__num">200+</div><div class="stat__label">patients</div></div>
+    <div class="stat"><div class="stat__num">3</div><div class="stat__label">imaging modalities</div></div>
+    <div class="stat"><div class="stat__num">5</div><div class="stat__label">work packages</div></div>
+    <div class="stat"><div class="stat__num">{{ p.months }}</div><div class="stat__label">months, to {{ p.end_label }}</div></div>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <p class="eyebrow">Timeline</p>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-year">2024</div><div class="tl-label">Project start and database collection</div></div>
+    <div class="tl-item"><div class="tl-year">2025</div><div class="tl-label">EZ localization with MRI, PET and MEG</div></div>
+    <div class="tl-item"><div class="tl-year">2026</div><div class="tl-label">Multimodal fusion models</div></div>
+    <div class="tl-item"><div class="tl-year">2027</div><div class="tl-label">Outcome prediction and validation</div></div>
+    <div class="tl-item"><div class="tl-year">2028</div><div class="tl-label">Clinical translation</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Partners</p>
+  <p class="lede" style="margin-bottom:1.2rem">A transdisciplinary consortium across imaging, neuroscience, clinical epileptology and signal processing.</p>
+  {% include partner-strip.html keys=p.partners %}
+</section>

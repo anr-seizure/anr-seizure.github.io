@@ -1,0 +1,29 @@
+{%- assign o = include.item -%}
+{%- assign status = o.status -%}
+{%- if status == 'auto' -%}
+  {%- if o.deadline and o.deadline != '' -%}
+    {%- assign today = site.time | date: '%Y-%m-%d' -%}
+    {%- if o.deadline < today -%}{%- assign status = 'closed' -%}{%- else -%}{%- assign status = 'open' -%}{%- endif -%}
+  {%- else -%}{%- assign status = 'open' -%}{%- endif -%}
+{%- endif -%}
+<article class="opening" data-level="{{ o.level }}" data-status="{{ status }}">
+  <div class="opening__top">
+    <span class="level-badge">{{ o.level }}</span>
+    {%- if o.wp -%}<span class="wp-tag">{{ o.wp }}</span>{%- endif -%}
+    {%- if o.lab -%}{% include institution-chip.html key=o.lab %}{%- endif -%}
+    <span class="status-pill status-pill--{{ status }}">{{ status }}</span>
+  </div>
+  <h3 class="opening__title">{{ o.title }}</h3>
+  <div class="opening__meta">
+    {%- if o.location -%}<span>{{ o.location }}</span>{%- endif -%}
+    {%- if o.duration -%}<span>{{ o.duration }}</span>{%- endif -%}
+    {%- if o.start -%}<span>Starts {{ o.start }}</span>{%- endif -%}
+    {%- if o.deadline and o.deadline != '' -%}<span>Apply by {{ o.deadline }}</span>{%- endif -%}
+  </div>
+  {%- if o.summary -%}<p class="opening__body">{{ o.summary }}</p>{%- endif -%}
+  {%- if o.profile -%}<p class="opening__body"><b>Profile.</b> {{ o.profile }}</p>{%- endif -%}
+  <div class="opening__foot">
+    {%- if o.apply_url -%}<a class="btn btn--primary btn--sm" href="{{ o.apply_url }}" target="_blank" rel="noopener">View offer <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>{%- endif -%}
+    {%- if o.contact -%}<a class="pill-link" href="mailto:{{ o.contact }}"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>{{ o.contact }}</a>{%- endif -%}
+  </div>
+</article>

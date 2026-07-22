@@ -1,0 +1,29 @@
+---
+layout: page
+title: Positions
+eyebrow: Join us
+intro: "Open internships, PhD and postdoc positions on the SEIZURE project. Interested but nothing fits? Reach out anyway."
+permalink: /positions/
+order: 4
+---
+{%- assign openings = site.data.openings.openings -%}
+{%- assign open_count = 0 -%}
+{%- for o in openings -%}{%- unless o.status == 'closed' -%}{%- assign open_count = open_count | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+
+{%- if openings and openings.size > 0 -%}
+<div class="op-list">
+  {%- for o in openings -%}{% include opening-card.html item=o %}{%- endfor -%}
+</div>
+{%- endif -%}
+
+{%- if open_count == 0 -%}
+<div class="positions-empty">
+  <p class="eyebrow" style="justify-content:center">No open positions right now</p>
+  <h2 style="margin-top:.6rem">We are always glad to hear from strong candidates</h2>
+  <p class="lede" style="margin:.8rem auto 0">Send a short motivation and your CV to <a href="mailto:{{ site.data.project.contact_email }}">the coordinator</a>. We regularly open internships, PhD and postdoc positions across imaging, MEG and machine learning.</p>
+</div>
+{%- else -%}
+<div class="positions-empty" style="margin-top:2rem; padding:2rem 1.5rem">
+  <p class="lede" style="margin-inline:auto">Nothing that fits? Spontaneous applications are welcome, write to <a href="mailto:{{ site.data.project.contact_email }}">the coordinator</a>.</p>
+</div>
+{%- endif -%}

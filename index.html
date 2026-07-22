@@ -1,0 +1,151 @@
+---
+layout: home
+title: SEIZURE
+description: "SEIZURE fuses MRI, PET and MEG with machine learning to localize the epileptogenic zone in drug-resistant epilepsy and predict surgical outcome. An ANR project coordinated by CREATIS."
+---
+{%- assign p = site.data.project -%}
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow">{{ p.anr_ref }} &middot; Panel {{ p.panel }}</p>
+      <h1 class="hero__wordmark">SE<b>I</b>ZURE</h1>
+      <p class="hero__acrostic">{% for a in p.acrostic %}<span class="cap">{{ a.cap }}</span>{{ a.rest }}{% endfor %}</p>
+      <p class="hero__tagline">{{ p.tagline }}</p>
+      <div class="hero__facts">
+        <span class="fact"><b>{{ p.start_label }} &ndash; {{ p.end_label }}</b></span>
+        <span class="fact">{{ p.months }} months</span>
+        <span class="fact">Coordinator <b>{{ p.coordinator.name }}</b></span>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="{{ '/overview/' | relative_url }}">Explore the project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn--ghost" href="{{ '/members/' | relative_url }}">Members</a>
+        <a class="btn btn--ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a class="btn btn--ghost" href="{{ '/positions/' | relative_url }}">Positions</a>
+      </div>
+      <div class="hero__partners">
+        {% include partner-strip.html keys=p.partners size="sm" %}
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <svg class="fusion" viewBox="0 0 520 440" role="img" aria-labelledby="fusion-title fusion-desc">
+        <title id="fusion-title">Multimodal fusion for epileptogenic zone localization</title>
+        <desc id="fusion-desc">Three imaging modalities, MRI, PET and MEG, feed a machine learning graph that localizes the epileptogenic zone.</desc>
+
+        <!-- modality tiles -->
+        <g>
+          <rect class="tile" x="8" y="36" width="96" height="84" rx="14"/>
+          <text class="lbl" x="56" y="60" text-anchor="middle">MRI</text>
+          <g style="stroke:var(--mri)" stroke-width="3" stroke-linecap="round">
+            <line x1="34" y1="86" x2="78" y2="86"/><line x1="34" y1="94" x2="78" y2="94"/><line x1="30" y1="102" x2="82" y2="102"/>
+          </g>
+
+          <rect class="tile" x="8" y="178" width="96" height="84" rx="14"/>
+          <text class="lbl" x="56" y="202" text-anchor="middle">PET</text>
+          <g style="fill:var(--pet)">
+            <circle cx="56" cy="232" r="17" opacity=".18"/><circle cx="56" cy="232" r="10" opacity=".42"/><circle cx="56" cy="232" r="5"/>
+          </g>
+
+          <rect class="tile" x="8" y="320" width="96" height="84" rx="14"/>
+          <text class="lbl" x="56" y="344" text-anchor="middle">MEG</text>
+          <path d="M 26,362 L 30,360 L 34,368 L 40,347 L 46,377 L 52,360 L 58,363 L 66,362 L 74,361 L 84,362" fill="none" style="stroke:var(--meg)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+        </g>
+
+        <!-- lanes from modalities to the fusion graph -->
+        <path class="lane lane--mri" d="M104,78 C170,78 205,150 262,208"/>
+        <path class="lane lane--pet" d="M104,220 C165,220 205,220 260,220"/>
+        <path class="lane lane--meg" d="M104,362 C170,362 205,290 262,232"/>
+
+        <!-- fusion graph -->
+        <text class="lbl" x="292" y="166" text-anchor="middle">graph fusion</text>
+        <g class="edge">
+          <line x1="290" y1="220" x2="288" y2="190"/><line x1="290" y1="220" x2="320" y2="210"/>
+          <line x1="290" y1="220" x2="300" y2="248"/><line x1="290" y1="220" x2="262" y2="230"/>
+          <line x1="288" y1="190" x2="320" y2="210"/><line x1="262" y1="230" x2="300" y2="248"/>
+        </g>
+        <g>
+          <circle class="node" cx="288" cy="190" r="6"/><circle class="node" cx="320" cy="210" r="6"/>
+          <circle class="node" cx="300" cy="248" r="6"/><circle class="node" cx="262" cy="230" r="6"/>
+          <circle class="node" cx="290" cy="220" r="8"/>
+        </g>
+
+        <!-- arrow to the focus -->
+        <line class="edge" x1="330" y1="212" x2="424" y2="220"/>
+        <path d="M424,214 L436,220 L424,226 Z" style="fill:var(--line-strong)"/>
+
+        <!-- epileptogenic zone focus -->
+        <circle cx="466" cy="220" r="30" style="fill:var(--focus)" opacity=".08"/>
+        <circle class="focus-ring" cx="466" cy="220" r="26" opacity=".55" stroke-width="3"/>
+        <circle class="focus-ring" cx="466" cy="220" r="16" stroke-width="3"/>
+        <circle class="focus-dot" cx="466" cy="220" r="6"/>
+        <text class="lbl lbl--focus" x="466" y="272" text-anchor="middle">EZ</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="signal-strip" aria-hidden="true">
+  <svg viewBox="0 0 1200 24" preserveAspectRatio="none">
+    <path class="base spike" d="M 0,12 L 300,12 L 320,12 L 330,3 L 340,20 L 350,12 L 1200,12" />
+  </svg>
+</div>
+
+<section class="container section" aria-labelledby="dash-title">
+  <h2 id="dash-title" class="visually-hidden">Latest updates</h2>
+  <div class="grid dashboard">
+
+    <div class="panel">
+      <div class="panel__head"><span class="eyebrow">Latest news</span></div>
+      <div class="panel__body">
+        {%- for item in site.data.news.news limit: 3 -%}
+          {% include news-item.html item=item %}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <span class="eyebrow">Publications</span>
+        <a class="panel__link" href="{{ '/publications/' | relative_url }}">All <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="panel__body">
+        {%- assign allpubs = site.data.publications.journal | concat: site.data.publications.conference | concat: site.data.publications.preprint -%}
+        {%- assign recent = allpubs | sort: 'year' | reverse -%}
+        {%- for it in recent limit: 3 -%}
+          {%- if it.hal_id %}{% assign href = 'https://hal.science/' | append: it.hal_id %}{% elsif it.doi %}{% assign href = 'https://doi.org/' | append: it.doi %}{% else %}{% assign href = '/publications/' | relative_url %}{% endif -%}
+          <a class="mini" href="{{ href }}"{% if href contains '://' %} target="_blank" rel="noopener"{% endif %}>
+            <div class="mini__meta"><span class="dot--{{ it.doctype }}">&#9632;</span>{{ it.doctype }} &middot; {{ it.year }}</div>
+            <div class="mini__title">{{ it.title }}</div>
+            {%- if it.venue %}<div class="mini__sub">{{ it.venue }}</div>{% endif -%}
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel__head">
+        <span class="eyebrow">Open positions</span>
+        <a class="panel__link" href="{{ '/positions/' | relative_url }}">All <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="panel__body">
+        {%- assign openings = site.data.openings.openings -%}
+        {%- assign shown = 0 -%}
+        {%- for o in openings -%}
+          {%- unless o.status == 'closed' -%}
+          {%- assign shown = shown | plus: 1 -%}
+          <a class="mini" href="{{ '/positions/' | relative_url }}">
+            <div class="mini__meta"><span class="level-badge">{{ o.level }}</span>{% if o.wp %}{{ o.wp }}{% endif %}</div>
+            <div class="mini__title">{{ o.title }}</div>
+            <div class="mini__sub">{{ o.location }}</div>
+          </a>
+          {%- endunless -%}
+        {%- endfor -%}
+        {%- if shown == 0 -%}
+          <p class="muted">No open positions right now. Spontaneous applications are welcome, <a href="mailto:{{ p.contact_email }}">get in touch</a>.</p>
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+</section>

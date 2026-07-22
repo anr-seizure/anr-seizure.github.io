@@ -1,0 +1,7 @@
+{%- assign w = include.item -%}
+<article class="wp-card" style="--wp:{{ w.color }}">
+  <div class="wp-card__id">{{ w.id }}</div>
+  <h3 class="wp-card__title">{{ w.title }}</h3>
+  {%- if w.lead -%}<div class="wp-card__lead">Lead: {{ w.lead }}</div>{%- endif -%}
+  <p class="wp-card__goal">{{ w.goal }}</p>
+</article>

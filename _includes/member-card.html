@@ -1,0 +1,41 @@
+{%- assign m = include.member -%}
+{%- assign primary = site.data.institutions[m.institutions[0]] -%}
+<article class="member" style="--inst:{{ primary.color | default: '#3d3ad4' }}">
+  {%- if m.picture -%}
+    <img class="member__photo" src="{{ '/members/' | append: m.picture | relative_url }}" alt="{{ m.firstname }} {{ m.lastname }}" loading="lazy" width="76" height="76">
+  {%- else -%}
+    <div class="member__photo member__photo--ph">{{ m.firstname | slice: 0 }}{{ m.lastname | slice: 0 }}</div>
+  {%- endif -%}
+  <div class="member__body">
+    <div>
+      {%- if m.lead -%}<span class="member__lead">{% if m.coordinator %}Coordinator{% elsif m.colead %}Co-lead{% else %}Principal investigator{% endif %}</span>{%- endif -%}
+      <h3 class="member__name">{{ m.firstname }} {{ m.lastname }}</h3>
+      <div class="member__role">{{ m.role }}</div>
+    </div>
+    <div class="member__insts">
+      {%- for k in m.institutions -%}{% include institution-chip.html key=k %}{%- endfor -%}
+    </div>
+    {%- if m.thesis -%}
+      <p class="member__thesis"><b>PhD thesis.</b> {{ m.thesis.title }}{% if m.thesis.supervisors %} <span class="muted">Supervised by {{ m.thesis.supervisors }}.</span>{% endif %}</p>
+    {%- elsif m.interests -%}
+      <p class="member__interests">{{ m.interests }}</p>
+    {%- endif -%}
+    <div class="member__links">
+      {%- if m.website -%}<a class="pill-link" href="{{ m.website }}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>Site</a>{%- endif -%}
+      {%- if m.idhal -%}<a class="pill-link" href="https://cv.hal.science/{{ m.idhal }}" target="_blank" rel="noopener">HAL</a>{%- elsif m.idhal_numeric -%}<a class="pill-link" href="https://hal.science/search/index/?q=*&authIdHal_i={{ m.idhal_numeric }}" target="_blank" rel="noopener">HAL</a>{%- endif -%}
+      {%- if m.orcid -%}<a class="pill-link" href="https://orcid.org/{{ m.orcid }}" target="_blank" rel="noopener">ORCID</a>{%- endif -%}
+      {%- if m.thesesfr -%}<a class="pill-link" href="{{ m.thesesfr }}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Thesis</a>{%- endif -%}
+    </div>
+    {%- assign pubs = site.data.member_pubs[m.key] -%}
+    {%- if pubs and pubs.size > 0 -%}
+    <details class="member__pubs">
+      <summary>Recent publications ({{ pubs.size }})</summary>
+      <ul>
+        {%- for pub in pubs -%}
+          <li><a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a> <span class="py">{{ pub.year }}</span></li>
+        {%- endfor -%}
+      </ul>
+    </details>
+    {%- endif -%}
+  </div>
+</article>

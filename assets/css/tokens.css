@@ -1,0 +1,69 @@
+/* SEIZURE design tokens: palette, type and scale. Light first, dark aware.
+   Palette anchors: brand indigo from the wordmark, a cool clinical paper, the project modality
+   trio (MRI red, PET violet, MEG green) and one warm focus accent for the epileptogenic zone. */
+
+/* Self hosted fonts (no third party CDN, GDPR clean). */
+@font-face { font-family:"Space Grotesk"; font-style:normal; font-weight:500; font-display:swap;
+  src:url("/assets/fonts/space-grotesk-500.woff2") format("woff2"); }
+@font-face { font-family:"Space Grotesk"; font-style:normal; font-weight:700; font-display:swap;
+  src:url("/assets/fonts/space-grotesk-700.woff2") format("woff2"); }
+@font-face { font-family:"IBM Plex Sans"; font-style:normal; font-weight:400; font-display:swap;
+  src:url("/assets/fonts/ibm-plex-sans-400.woff2") format("woff2"); }
+@font-face { font-family:"IBM Plex Sans"; font-style:normal; font-weight:600; font-display:swap;
+  src:url("/assets/fonts/ibm-plex-sans-600.woff2") format("woff2"); }
+@font-face { font-family:"IBM Plex Mono"; font-style:normal; font-weight:400; font-display:swap;
+  src:url("/assets/fonts/ibm-plex-mono-400.woff2") format("woff2"); }
+@font-face { font-family:"IBM Plex Mono"; font-style:normal; font-weight:500; font-display:swap;
+  src:url("/assets/fonts/ibm-plex-mono-500.woff2") format("woff2"); }
+
+:root {
+  /* brand and modality */
+  --indigo:#3d3ad4; --indigo-hover:#302cb4; --indigo-tint:#ecebfb; --indigo-ink:#2a2896;
+  --mri:#e23b3b; --pet:#8a3fd0; --meg:#12a46b; --focus:#ff5a2c;
+
+  /* neutrals, cool clinical */
+  --paper:#f3f6fb; --surface:#ffffff; --surface-2:#f7f9fd;
+  --ink:#141824; --muted:#586079; --faint:#8b92a8;
+  --line:#e3e8f1; --line-strong:#d2d9e6;
+  --shadow-sm:0 1px 2px rgba(20,24,40,.05), 0 1px 3px rgba(20,24,40,.06);
+  --shadow-md:0 2px 6px rgba(20,24,40,.06), 0 14px 34px rgba(20,24,40,.09);
+  --ring:color-mix(in srgb, var(--indigo) 55%, transparent);
+
+  /* type */
+  --font-display:"Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-body:"IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --step--2:clamp(.68rem,.66rem + .08vw,.72rem);
+  --step--1:clamp(.8rem,.77rem + .12vw,.86rem);
+  --step-0:clamp(1rem,.97rem + .16vw,1.08rem);
+  --step-1:clamp(1.16rem,1.09rem + .34vw,1.4rem);
+  --step-2:clamp(1.42rem,1.28rem + .7vw,1.95rem);
+  --step-3:clamp(1.9rem,1.6rem + 1.5vw,2.9rem);
+  --step-4:clamp(2.6rem,2rem + 3vw,4.6rem);
+  --step-5:clamp(3.2rem,2.3rem + 4.6vw,6rem);
+
+  /* geometry */
+  --r-xs:6px; --r-sm:10px; --r-md:16px; --r-lg:24px; --r-pill:999px;
+  --container:1180px; --measure:66ch;
+  --gap:clamp(1rem,.7rem + 1.4vw,1.7rem);
+  --pad-section:clamp(3rem,2rem + 5vw,6rem);
+  --header-h:64px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --indigo:#8f92ff; --indigo-hover:#a6a8ff; --indigo-tint:#1a1e33; --indigo-ink:#c3c4ff;
+    --mri:#ff6b6b; --pet:#c08bf0; --meg:#3ecf95; --focus:#ff7a52;
+    --paper:#0c0f17; --surface:#141926; --surface-2:#1a2030;
+    --ink:#eef1f8; --muted:#9aa2ba; --faint:#727a92; --line:#232a3a; --line-strong:#313a4f;
+    --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow-md:0 2px 8px rgba(0,0,0,.4), 0 18px 40px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="dark"] {
+  --indigo:#8f92ff; --indigo-hover:#a6a8ff; --indigo-tint:#1a1e33; --indigo-ink:#c3c4ff;
+  --mri:#ff6b6b; --pet:#c08bf0; --meg:#3ecf95; --focus:#ff7a52;
+  --paper:#0c0f17; --surface:#141926; --surface-2:#1a2030;
+  --ink:#eef1f8; --muted:#9aa2ba; --faint:#727a92; --line:#232a3a; --line-strong:#313a4f;
+  --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow-md:0 2px 8px rgba(0,0,0,.4), 0 18px 40px rgba(0,0,0,.45);
+}

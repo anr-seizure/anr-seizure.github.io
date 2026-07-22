@@ -1,0 +1,30 @@
+{%- assign p = site.data.project -%}
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="brand" href="{{ '/' | relative_url }}">SE<b>I</b>ZURE</a>
+      <p class="footer__tagline">{{ p.tagline }}</p>
+      <p class="footer__meta">{{ p.anr_ref }} &middot; {{ p.start_label }} to {{ p.end_label }} &middot; Coordinated by {{ p.coordinator.name }}</p>
+      <div style="margin-top:1.1rem">{% include partner-strip.html keys=p.partners size="sm" %}</div>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <ul class="footer__links">
+        {%- for item in site.nav -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+      <h4 style="margin-top:1.3rem">Project</h4>
+      <ul class="footer__links">
+        <li><a href="{{ p.anr_url }}" target="_blank" rel="noopener">ANR project page</a></li>
+        <li><a href="{{ p.hal_url }}" target="_blank" rel="noopener">Publications on HAL</a></li>
+        <li><a href="mailto:{{ p.contact_email }}">Contact us</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>&copy; {{ site.time | date: "%Y" }} SEIZURE consortium</span>
+    <span>Funded by the Agence Nationale de la Recherche</span>
+  </div>
+</footer>

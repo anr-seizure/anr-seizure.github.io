@@ -1,0 +1,10 @@
+{%- assign n = include.item -%}
+{%- if n.url contains '://' -%}{%- assign href = n.url -%}{%- else -%}{%- assign href = n.url | relative_url -%}{%- endif -%}
+<a class="news__item" href="{{ href }}"{% if n.url contains '://' %} target="_blank" rel="noopener"{% endif %}>
+  <div class="news__meta">
+    <span class="news__date">{{ n.date | date: "%b %Y" }}</span>
+    {%- if n.tag -%}<span class="tag tag--{{ n.tag }}">{{ n.tag }}</span>{%- endif -%}
+  </div>
+  <div class="news__title">{{ n.title }}</div>
+  {%- if n.blurb -%}<div class="news__blurb">{{ n.blurb }}</div>{%- endif -%}
+</a>

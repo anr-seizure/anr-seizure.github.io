@@ -1,0 +1,6 @@
+{%- assign inst = site.data.institutions[include.key] -%}
+{%- if inst -%}
+<a class="chip" href="{{ inst.url }}" target="_blank" rel="noopener" style="--inst:{{ inst.color }}" title="{{ inst.full | default: inst.name }}">
+  <span class="chip__dot"></span><span>{{ inst.short | default: inst.name }}</span>
+</a>
+{%- endif -%}

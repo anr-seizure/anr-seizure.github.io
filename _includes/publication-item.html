@@ -1,0 +1,15 @@
+{%- assign it = include.item -%}
+<article class="pub" data-type="{{ it.doctype }}">
+  {%- if it.figure -%}<img class="pub__figure" src="{{ it.figure | relative_url }}" alt="Figure from {{ it.title | truncate: 40 }}" loading="lazy">{%- endif -%}
+  <div class="pub__main">
+    <div class="pub__type">{{ it.doctype }}{% if it.year %} &middot; {{ it.year }}{% endif %}</div>
+    <h3 class="pub__title">{{ it.title }}</h3>
+    <div class="pub__authors">{{ it.authors }}</div>
+    {%- if it.venue -%}<div class="pub__venue">{{ it.venue }}</div>{%- endif -%}
+    <div class="pub__links">
+      {%- if it.hal_id -%}<a class="pill-link" href="https://hal.science/{{ it.hal_id }}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>HAL</a>{%- endif -%}
+      {%- if it.doi -%}<a class="pill-link" href="https://doi.org/{{ it.doi }}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>DOI</a>{%- endif -%}
+      {%- if it.pdf -%}<a class="pill-link" href="{{ it.pdf }}" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg>PDF</a>{%- endif -%}
+    </div>
+  </div>
+</article>
