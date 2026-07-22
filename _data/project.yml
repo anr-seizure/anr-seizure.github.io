@@ -33,7 +33,7 @@ hal_url: "https://anr.hal.science/search/index/?q=*&anrProjectReference_s=ANR-24
 contact_email: "carole.lartizien@creatis.insa-lyon.fr"
 
 # Logos shown in the home hero and footer partner strip (keys reference institutions.yml).
-partners: [anr, cnrs, inserm, insa, ensl, inria, hcl]
+partners: [anr, creatis, crnl, ensl, hcl, cnrs, inserm, insa, inria]
 
 # Work packages, shown as color coded cards on the overview page.
 # color is a semantic accent; lead is free text.

@@ -57,21 +57,21 @@ description: "SEIZURE fuses MRI, PET and MEG with machine learning to localize t
         <path class="lane lane--pet" d="M104,220 C165,220 205,220 260,220"/>
         <path class="lane lane--meg" d="M104,362 C170,362 205,290 262,232"/>
 
-        <!-- fusion graph -->
-        <text class="lbl" x="292" y="166" text-anchor="middle">graph fusion</text>
+        <!-- fusion graph, centered on y=220 with a right anchor node so the exit is horizontal -->
+        <text class="lbl" x="295" y="168" text-anchor="middle">graph fusion</text>
         <g class="edge">
-          <line x1="290" y1="220" x2="288" y2="190"/><line x1="290" y1="220" x2="320" y2="210"/>
-          <line x1="290" y1="220" x2="300" y2="248"/><line x1="290" y1="220" x2="262" y2="230"/>
-          <line x1="288" y1="190" x2="320" y2="210"/><line x1="262" y1="230" x2="300" y2="248"/>
+          <line x1="295" y1="220" x2="292" y2="194"/><line x1="295" y1="220" x2="324" y2="220"/>
+          <line x1="295" y1="220" x2="300" y2="248"/><line x1="295" y1="220" x2="266" y2="226"/>
+          <line x1="292" y1="194" x2="324" y2="220"/><line x1="266" y1="226" x2="300" y2="248"/>
         </g>
         <g>
-          <circle class="node" cx="288" cy="190" r="6"/><circle class="node" cx="320" cy="210" r="6"/>
-          <circle class="node" cx="300" cy="248" r="6"/><circle class="node" cx="262" cy="230" r="6"/>
-          <circle class="node" cx="290" cy="220" r="8"/>
+          <circle class="node" cx="292" cy="194" r="5.5"/><circle class="node" cx="324" cy="220" r="5.5"/>
+          <circle class="node" cx="300" cy="248" r="5.5"/><circle class="node" cx="266" cy="226" r="5.5"/>
+          <circle class="node" cx="295" cy="220" r="7.5"/>
         </g>
 
-        <!-- arrow to the focus -->
-        <line class="edge" x1="330" y1="212" x2="424" y2="220"/>
+        <!-- horizontal arrow from the graph to the focus -->
+        <line class="edge" x1="334" y1="220" x2="424" y2="220"/>
         <path d="M424,214 L436,220 L424,226 Z" style="fill:var(--line-strong)"/>
 
         <!-- epileptogenic zone focus -->
