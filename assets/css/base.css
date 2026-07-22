@@ -2,6 +2,8 @@
 
 *,*::before,*::after { box-sizing:border-box; }
 * { margin:0; }
+/* ensure the hidden attribute always wins, even over components that set display */
+[hidden] { display:none !important; }
 html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
 
