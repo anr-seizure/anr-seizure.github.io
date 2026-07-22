@@ -5,3 +5,8 @@ _previews
 .jekyll-cache
 .Rhistory
 *.swp
+.idea/
+.claude/
+docs/superpowers/
+.DS_Store
+_preview
