@@ -12,7 +12,6 @@ kramdown:
   math_engine: mathjax
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # Primary navigation, rendered in the header.
