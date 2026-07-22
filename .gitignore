@@ -10,3 +10,7 @@ _previews
 docs/superpowers/
 .DS_Store
 _preview
+__pycache__/
+*.pyc
+.pytest_cache/
+_site/
