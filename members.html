@@ -10,7 +10,8 @@ order: 2
 {%- for lab in order -%}
   {%- assign people = site.data.members[lab] -%}
   {%- if people -%}
-  {%- assign inst = site.data.institutions[lab | downcase] -%}
+  {%- assign inst_key = lab | downcase -%}
+  {%- assign inst = site.data.institutions[inst_key] -%}
   <section class="lab-section" style="--inst:{{ inst.color | default: '#3d3ad4' }}">
     <div class="lab-head">
       <h2>{{ inst.short | default: lab }}</h2>
