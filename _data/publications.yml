@@ -15,6 +15,7 @@ journal:
   doi: 10.1016/j.cmpb.2025.108727
   url: https://hal.science/hal-05061806v1
   hal_id: hal-05061806
+  figure: /images/publications/hal-05061806.jpg
   source: auto
 conference:
 - key: 10.48550/arxiv.2508.12927
@@ -54,4 +55,5 @@ preprint:
   doctype: preprint
   url: https://hal.science/hal-05164029v3
   hal_id: hal-05164029
+  figure: /images/publications/hal-05164029.jpg
   source: auto
