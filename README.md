@@ -151,6 +151,14 @@ bundle exec jekyll serve
 
 Open http://localhost:4000. The site reloads automatically when you save a data file.
 
+**Troubleshooting.**
+
+- `command not found: bundle` (or `jekyll`): the setup above has not run yet, or your shell has not
+  picked up the new `PATH` (open a new terminal or run `source ~/.zshrc`).
+- `undefined method 'tainted?'`: an old Jekyll (from an outdated `github-pages`) on modern Ruby
+  (3.2+). The `Gemfile` pins a current `github-pages` (Jekyll 3.10) that works on Ruby 3.2+, so run
+  `bundle install` (or `bundle update github-pages`) and try again.
+
 ---
 
 ## Repository layout
