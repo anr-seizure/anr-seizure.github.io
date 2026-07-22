@@ -52,10 +52,10 @@ description: "SEIZURE fuses MRI, PET and MEG with machine learning to localize t
           <path d="M 26,362 L 30,360 L 34,368 L 40,347 L 46,377 L 52,360 L 58,363 L 66,362 L 74,361 L 84,362" fill="none" style="stroke:var(--meg)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
         </g>
 
-        <!-- lanes from modalities to the fusion graph -->
-        <path class="lane lane--mri" d="M104,78 C170,78 205,150 262,208"/>
-        <path class="lane lane--pet" d="M104,220 C165,220 205,220 260,220"/>
-        <path class="lane lane--meg" d="M104,362 C170,362 205,290 262,232"/>
+        <!-- lanes from modalities toward the fusion graph, ending short of it for breathing room -->
+        <path class="lane lane--mri" d="M104,78 C162,78 196,150 236,206"/>
+        <path class="lane lane--pet" d="M104,220 C156,220 196,220 236,220"/>
+        <path class="lane lane--meg" d="M104,362 C162,362 196,288 236,234"/>
 
         <!-- fusion graph, centered on y=220 with a right anchor node so the exit is horizontal -->
         <text class="lbl" x="295" y="168" text-anchor="middle">graph fusion</text>
