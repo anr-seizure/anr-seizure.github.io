@@ -1,18 +1,57 @@
+# Project publications. Auto entries come from HAL (scripts/fetch_hal.py); entries with
+# source: manual are written by hand and are never overwritten. Add a figure: path to any
+# entry to show a thumbnail; it survives refreshes.
 journal_list_title: Journal papers
+conference_list_title: Conference and workshop papers
+preprint_list_title: Preprints
 journal:
-                                                                        
-  - authors: 'D Zotova, N Pinon, R Trombetta, R Bouet, J Jung and C Lartizien'
-    year: 2025
-    title: 'GAN-based synthetic FDG PET images from T1 brain MRI can serve to improve performance of deep unsupervised anomaly detection models'
-    journal: Computer Methods and Programs in Biomedicine
-    pages : early access
-    doi: https://arxiv.org/pdf/2505.07364?
-
-
-conference_list_title: Conference proceedings
+- key: 10.1016/j.cmpb.2025.108727
+  title: GAN-based synthetic FDG PET images from T1 brain MRI can serve to improve performance of deep
+    unsupervised anomaly detection models
+  authors: Daria Zotova, Nicolas Pinon, Robin Trombetta, Romain Bouet, Julien Jung, Carole Lartizien
+  year: 2025
+  venue: Computer Methods and Programs in Biomedicine
+  doctype: journal
+  doi: 10.1016/j.cmpb.2025.108727
+  url: https://hal.science/hal-05061806v1
+  hal_id: hal-05061806
+  source: auto
 conference:
-
-  - authors: 'Robin Trombetta, Pierre Falconnier, Carole Lartizien'
-    year: 2025
-    title: 'Etude comparative d encodeurs génériques pour la vision ou spécifiques à l imagerie médicale pour l extraction de caractéristiques sur des données 3D cérébrales multimodales'
-    conference: 3eme Colloque Français d Intelligence Artificielle en Imagerie Biomédicale (IABM 2025)
+- key: 10.48550/arxiv.2508.12927
+  title: Learning local and global prototypes with optimal transport for unsupervised anomaly detection
+    and localization
+  authors: Robin Trombetta, Carole Lartizien
+  year: 2025
+  venue: Learning From Small Data (LFSD), European Conference on Machine Learning and Principles and Practice
+    of Knowledge Discovery in Databases (ECML) Workshop
+  doctype: conference
+  doi: 10.48550/arXiv.2508.12927
+  url: https://hal.science/hal-05397692v1
+  hal_id: hal-05397692
+  source: auto
+- key: hal-05364300
+  title: Spatial contrastive pre-training of transformer encoders for seeg-based seizure onset zone detection
+  authors: Zacharie Rodière, Pierre Borgnat, Paulo Gonçalves, Julien Jung
+  year: 2025
+  venue: GSP 2025 - Workshop on Graph Signal Processing
+  doctype: conference
+  url: https://hal.science/hal-05364300v1
+  hal_id: hal-05364300
+  source: auto
+- key: iabm2025-trombetta
+  title: Étude comparative d'encodeurs génériques pour la vision ou spécifiques à l'imagerie médicale
+    pour l'extraction de caractéristiques sur des données 3D cérébrales multimodales
+  authors: Robin Trombetta, Pierre Falconnier, Carole Lartizien
+  year: 2025
+  venue: IABM 2025, Colloque Français d'Intelligence Artificielle en Imagerie Biomédicale
+  doctype: conference
+  source: manual
+preprint:
+- key: hal-05164029
+  title: OCSVM-Guided Representation Learning for Unsupervised Anomaly Detection
+  authors: Nicolas Pinon, Robin Trombetta, Carole Lartizien
+  year: 2026
+  doctype: preprint
+  url: https://hal.science/hal-05164029v3
+  hal_id: hal-05164029
+  source: auto
