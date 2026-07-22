@@ -74,7 +74,6 @@ CRNL:
     idhal: "romain-bouet"
     idhal_numeric: "761121"
     orcid: "0000-0002-3690-2976"
-    website: "https://cv.hal.science/romain-bouet"
 
   - firstname: 'Pauline'
     lastname: 'Mouches'
@@ -85,7 +84,6 @@ CRNL:
     interests: "machine learning, MEG and MRI, neuroimaging"
     idhal_numeric: "1219214"
     orcid: "0000-0002-0304-5584"
-    website: "https://www.crnl.fr/en/user/936"
 
 HCL:
   - firstname: 'Julien'
