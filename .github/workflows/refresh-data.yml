@@ -1,0 +1,39 @@
+name: Refresh publications from HAL
+
+# Keeps _data/publications.yml and _data/member_pubs.yml in sync with HAL.
+# Manual entries (source: manual) and curated figure paths are preserved by the script.
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # every Monday at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch from HAL
+        run: python scripts/fetch_hal.py
+
+      - name: Commit changes if any
+        run: |
+          if [ -n "$(git status --porcelain _data/publications.yml _data/member_pubs.yml)" ]; then
+            git config user.name "seizure-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add _data/publications.yml _data/member_pubs.yml
+            git commit -m "data: refresh publications from HAL"
+            git push
+          else
+            echo "No changes."
+          fi
