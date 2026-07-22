@@ -34,7 +34,7 @@ anr:
   name: "ANR"
   full: "Agence Nationale de la Recherche"
   color: "#4162ff"
-  logo: "/assets/logos/anr.svg"
+  logo: "/assets/logos/anr.png"
   url: "https://anr.fr/"
 
 cnrs:
