@@ -1,4 +1,4 @@
-# Central project facts. Edit here to update the home hero, overview header and footer.
+# Central project facts. Edit here to update the home intro, overview header and footer.
 # Everything below is plain data, no code. Change a value, rebuild, done.
 
 title_short: SEIZURE
@@ -32,7 +32,7 @@ anr_url: "https://anr.fr/Projet-ANR-24-CE45-4399"
 hal_url: "https://anr.hal.science/search/index/?q=*&anrProjectReference_s=ANR-24-CE45-4399"
 contact_email: "carole.lartizien@creatis.insa-lyon.fr"
 
-# Logos shown in the home hero and footer partner strip (keys reference institutions.yml).
+# Logos shown in the home intro and footer partner strip (keys reference institutions.yml).
 partners: [anr, creatis, crnl, ensl, hcl, cnrs, inserm, insa, inria]
 
 # Work packages, shown as color coded cards on the overview page.

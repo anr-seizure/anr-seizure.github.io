@@ -1,4 +1,4 @@
-/* Components: header, buttons, hero, dashboard, cards, chips, publications, positions, footer. */
+/* Components: header, buttons, intro, dashboard, cards, chips, publications, positions, footer. */
 
 /* ---------- header ---------- */
 .site-header {
@@ -48,32 +48,32 @@
 .icon { width:1em; height:1em; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; vertical-align:-.125em; }
 .icon--fill { fill:currentColor; stroke:none; }
 
-/* ---------- hero ---------- */
-.hero { position:relative; min-height:calc(100svh - var(--header-h)); display:flex; align-items:center; overflow:hidden; }
-.hero__inner { display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(1.5rem,1rem + 3vw,4rem); align-items:center; padding-block:clamp(1.25rem,2.5vh,2.5rem); }
-.hero__content { display:flex; flex-direction:column; gap:1rem; }
-.hero__wordmark { font-family:var(--font-display); font-weight:700; font-size:var(--step-5); line-height:.92; --ls:-.02em; letter-spacing:var(--ls); color:var(--ink); }
+/* ---------- intro ---------- */
+.intro { position:relative; min-height:calc(100svh - var(--header-h)); display:flex; align-items:center; overflow:hidden; }
+.intro__inner { display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(1.5rem,1rem + 3vw,4rem); align-items:center; padding-block:clamp(1.25rem,2.5vh,2.5rem); }
+.intro__content { display:flex; flex-direction:column; gap:1rem; }
+.intro__wordmark { font-family:var(--font-display); font-weight:700; font-size:var(--step-5); line-height:.92; --ls:-.02em; letter-spacing:var(--ls); color:var(--ink); }
 /* the I in every SEIZURE wordmark carries a coral dot (a tittle) that echoes the
    epileptogenic zone marker in the fusion visual */
 /* zero the I's own trailing letter-spacing and re-add the gap as a margin, so the dot's box is the
    bare glyph. left:50% then centers on the stroke identically in every browser (letter-spacing is
    included in the inline box inconsistently across engines). */
-.hero__wordmark b, .brand b { color:var(--indigo); position:relative; letter-spacing:0; margin-right:var(--ls); }
-.hero__wordmark b::after, .brand b::after {
+.intro__wordmark b, .brand b { color:var(--indigo); position:relative; letter-spacing:0; margin-right:var(--ls); }
+.intro__wordmark b::after, .brand b::after {
   content:""; position:absolute; left:50%; top:.26em; transform:translate(-50%, -100%);
   width:.14em; height:.14em; border-radius:50%; background:var(--focus);
 }
-.hero__acrostic { font-size:var(--step-1); line-height:1.4; color:var(--ink); max-width:36ch; }
-.hero__acrostic .cap { color:var(--indigo); font-weight:600; font-family:var(--font-display); }
-.hero__tagline { color:var(--muted); font-size:var(--step-0); max-width:46ch; }
-.hero__facts { display:flex; flex-wrap:wrap; gap:.5rem; }
+.intro__acrostic { font-size:var(--step-1); line-height:1.4; color:var(--ink); max-width:36ch; }
+.intro__acrostic .cap { color:var(--indigo); font-weight:600; font-family:var(--font-display); }
+.intro__tagline { color:var(--muted); font-size:var(--step-0); max-width:46ch; }
+.intro__facts { display:flex; flex-wrap:wrap; gap:.5rem; }
 .fact { display:inline-flex; align-items:center; gap:.45rem; font-family:var(--font-mono); font-size:var(--step--1); color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:var(--r-pill); padding:.35rem .8rem; }
 .fact b { color:var(--indigo-ink); font-weight:500; }
-.hero__cta { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.2rem; }
-.hero__partners { margin-top:.4rem; }
+.intro__cta { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:.2rem; }
+.intro__partners { margin-top:.4rem; }
 
 /* fusion visual */
-.hero__visual { position:relative; }
+.intro__visual { position:relative; }
 .fusion { width:100%; height:auto; }
 .fusion .lane { fill:none; stroke-width:2.2; opacity:.9; }
 .fusion .lane--mri { stroke:var(--mri); } .fusion .lane--pet { stroke:var(--pet); } .fusion .lane--meg { stroke:var(--meg); }
@@ -217,8 +217,8 @@ a.mini:hover .mini__title { color:var(--indigo-ink); }
 .positions-empty { text-align:center; background:var(--surface); border:1px dashed var(--line-strong); border-radius:var(--r-lg); padding:3rem 1.5rem; }
 
 /* ---------- overview ---------- */
-.figure-hero { background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); padding:1rem; box-shadow:var(--shadow-sm); }
-.figure-hero figcaption { font-size:var(--step--1); color:var(--muted); margin-top:.6rem; text-align:center; }
+.figure-card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r-lg); padding:1rem; box-shadow:var(--shadow-sm); }
+.figure-card figcaption { font-size:var(--step--1); color:var(--muted); margin-top:.6rem; text-align:center; }
 .split { display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(1.5rem,3vw,3rem); align-items:start; }
 .prose p { margin-top:1rem; color:var(--ink); }
 .prose p:first-child { margin-top:0; }
@@ -263,8 +263,8 @@ a.mini:hover .mini__title { color:var(--indigo-ink); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px){
-  .hero__inner { grid-template-columns:1fr; gap:1.5rem; }
-  .hero__visual { order:-1; max-width:460px; }
+  .intro__inner { grid-template-columns:1fr; gap:1.5rem; }
+  .intro__visual { order:-1; max-width:460px; }
   .dashboard { grid-template-columns:1fr; }
   .split { grid-template-columns:1fr; }
   .footer__inner { grid-template-columns:1fr; }
@@ -276,5 +276,5 @@ a.mini:hover .mini__title { color:var(--indigo-ink); }
   .nav-list { flex-direction:column; align-items:stretch; padding:.6rem; gap:.15rem; }
   .nav-list a { padding:.8rem 1rem; }
   .nav-toggle { display:inline-grid; }
-  .hero__wordmark { font-size:clamp(3rem,14vw,4.2rem); }
+  .intro__wordmark { font-size:clamp(3rem,14vw,4.2rem); }
 }

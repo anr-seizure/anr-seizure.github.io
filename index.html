@@ -5,30 +5,30 @@ description: "SEIZURE fuses MRI, PET and MEG with machine learning to localize t
 ---
 {%- assign p = site.data.project -%}
 
-<section class="hero">
-  <div class="container hero__inner">
-    <div class="hero__content">
+<section class="intro">
+  <div class="container intro__inner">
+    <div class="intro__content">
       <p class="eyebrow">{{ p.anr_ref }} &middot; Panel {{ p.panel }}</p>
-      <h1 class="hero__wordmark">SE<b>I</b>ZURE</h1>
-      <p class="hero__acrostic">{% for a in p.acrostic %}<span class="cap">{{ a.cap }}</span>{{ a.rest }}{% endfor %}</p>
-      <p class="hero__tagline">{{ p.tagline }}</p>
-      <div class="hero__facts">
+      <h1 class="intro__wordmark">SE<b>I</b>ZURE</h1>
+      <p class="intro__acrostic">{% for a in p.acrostic %}<span class="cap">{{ a.cap }}</span>{{ a.rest }}{% endfor %}</p>
+      <p class="intro__tagline">{{ p.tagline }}</p>
+      <div class="intro__facts">
         <span class="fact"><b>{{ p.start_label }} &ndash; {{ p.end_label }}</b></span>
         <span class="fact">{{ p.months }} months</span>
         <span class="fact">Coordinator <b>{{ p.coordinator.name }}</b></span>
       </div>
-      <div class="hero__cta">
+      <div class="intro__cta">
         <a class="btn btn--primary" href="{{ '/overview/' | relative_url }}">Explore the project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         <a class="btn btn--ghost" href="{{ '/members/' | relative_url }}">Members</a>
         <a class="btn btn--ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
         <a class="btn btn--ghost" href="{{ '/positions/' | relative_url }}">Positions</a>
       </div>
-      <div class="hero__partners">
+      <div class="intro__partners">
         {% include partner-strip.html keys=p.partners size="sm" %}
       </div>
     </div>
 
-    <div class="hero__visual">
+    <div class="intro__visual">
       <svg class="fusion" viewBox="0 0 520 440" role="img" aria-labelledby="fusion-title fusion-desc">
         <title id="fusion-title">Multimodal fusion for epileptogenic zone localization</title>
         <desc id="fusion-desc">Three imaging modalities, MRI, PET and MEG, feed a machine learning graph that localizes the epileptogenic zone.</desc>

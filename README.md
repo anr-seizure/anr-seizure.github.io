@@ -15,7 +15,7 @@ from small data files in the `_data/` folder, so updating the site is usually ju
 
 | File | What it controls |
 |------|------------------|
-| `_data/project.yml` | Project facts, home page hero text, work packages, the partner logo row |
+| `_data/project.yml` | Project facts, home page intro text, work packages, the partner logo row |
 | `_data/institutions.yml` | Institution names, brand colors and logos (used by the chips and logo strip) |
 | `_data/members.yml` | Members, grouped by lab, with role, institutions, thesis and scholarly ids |
 | `_data/publications.yml` | Publications (filled automatically from HAL, plus any hand written entries) |
