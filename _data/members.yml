@@ -134,3 +134,17 @@ ENSL:
     idhal_numeric: "6491"
     orcid: "0000-0002-1781-6159"
     website: "http://perso.ens-lyon.fr/paulo.goncalves/"
+
+  - firstname: 'Elias'
+    lastname: 'Boulanger'
+    key: boulanger
+    role: 'PhD student'
+    institutions: [ensl, crnl]
+    picture: 'eBoulanger.jpg'
+    interests: "machine learning, graph signal processing, MEG and SEEG, epilepsy"
+    thesis:
+      title: "Apprentissage automatique et graphes pour l'étude de l'épilepsie : caractérisation des réseaux épileptogènes dynamiques"
+      supervisors: "Pierre Borgnat (ENS de Lyon) and Romain Quentin (CRNL)"
+      start: 2025
+    orcid: "0009-0008-1377-8627"
+    thesesfr: "https://theses.fr/s432587"
