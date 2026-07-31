@@ -4,7 +4,8 @@ name: Refresh publications from HAL
 # Manual entries (source: manual) and curated figure paths are preserved by the script.
 on:
   schedule:
-    - cron: "0 6 * * 1"   # every Monday at 06:00 UTC
+    # avoid the top of the hour: GitHub's scheduler most often delays or drops those runs
+    - cron: "23 6 * * 1"   # every Monday around 06:23 UTC (best effort)
   workflow_dispatch: {}
 
 permissions:
