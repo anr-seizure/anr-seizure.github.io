@@ -31,6 +31,10 @@ trombetta:
   url: https://hal.science/hal-05397692v1
   doctype: conference
 quentin:
+- title: Automated interictal epileptic spike detection from simple and noisy annotations in MEG data
+  year: 2026
+  url: https://hal.science/hal-05708631v1
+  doctype: journal
 - title: 'Decoding hypnotic consciousness: neural and experiential insights into induced and ideomotor
     suggestions'
   year: 2026
@@ -41,26 +45,25 @@ quentin:
   year: 2026
   url: https://hal.science/hal-05698168v1
   doctype: journal
-- title: Modulation of error sensitivity during motor learning across time, space and environment variability
-  year: 2026
-  url: https://hal.science/hal-05575402v1
-  doctype: preprint
 bouet:
 - title: A disorder of consciousness rather than complete locked-in may be the final stage of ALS
   year: 2026
   url: https://insep.hal.science/hal-04680492v1
   doctype: preprint
+- title: Automated interictal epileptic spike detection from simple and noisy annotations in MEG data
+  year: 2026
+  url: https://hal.science/hal-05708631v1
+  doctype: journal
 - title: 'Choosing the best or avoiding the worst: complementary and opponent value signals in the human
     brain'
   year: 2026
   url: https://hal.science/hal-05409972v1
   doctype: preprint
-- title: 'Deep brain stimulation of the thalamus for intractable epilepsy (FRANCE study): A randomized
-    clinical trial'
-  year: 2026
-  url: https://hal.science/hal-05574571v1
-  doctype: journal
 mouches:
+- title: Automated interictal epileptic spike detection from simple and noisy annotations in MEG data
+  year: 2026
+  url: https://hal.science/hal-05708631v1
+  doctype: journal
 - title: 'DeepEpiX: A software for visualization, annotation and automatic epileptical spike detection
     in MEG recordings'
   year: 2026
@@ -71,11 +74,6 @@ mouches:
   year: 2026
   url: https://hal.science/hal-05640657v1
   doctype: conference
-- title: 'Identifying and interpreting interictal abnormalities: Does visual analysis of standard EEG
-    still have a role?'
-  year: 2025
-  url: https://hal.science/hal-04973999v1
-  doctype: journal
 jung:
 - title: A disorder of consciousness rather than complete locked-in may be the final stage of ALS
   year: 2026

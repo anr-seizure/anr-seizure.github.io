@@ -5,6 +5,17 @@ journal_list_title: Journal papers
 conference_list_title: Conference and workshop papers
 preprint_list_title: Preprints
 journal:
+- key: 10.1007/s00429-026-03118-4
+  title: Automated interictal epileptic spike detection from simple and noisy annotations in MEG data
+  authors: Pauline Mouches, Julien Jung, Armand Demasson, Agnès Guinard, Romain Bouet, Rosalie Marchal,
+    Romain Quentin
+  year: 2026
+  venue: Brain Structure and Function
+  doctype: journal
+  doi: 10.1007/s00429-026-03118-4
+  url: https://hal.science/hal-05708631v1
+  hal_id: hal-05708631
+  source: auto
 - key: 10.1016/j.jneumeth.2026.110805
   title: 'DeepEpiX: A software for visualization, annotation and automatic epileptical spike detection
     in MEG recordings'
