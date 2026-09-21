@@ -21,6 +21,8 @@ import sys
 try:
     import requests
     import yaml
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
 except ImportError as exc:  # pragma: no cover, exercised only without deps installed
     sys.stderr.write("Missing dependency: %s. Run pip install -r scripts/requirements.txt\n" % exc)
     raise
@@ -159,9 +161,19 @@ def merge_publications(existing: dict, fetched: list) -> dict:
 
 # Network helpers below are not covered by unit tests.
 
+# One shared session that retries transient failures (HAL occasionally drops connections from
+# CI runners), with a short exponential backoff so a real outage still fails within a minute.
+_SESSION = requests.Session()
+_SESSION.mount("https://", HTTPAdapter(max_retries=Retry(
+    total=3, backoff_factor=2,
+    status_forcelist=(429, 500, 502, 503, 504),
+    allowed_methods=frozenset({"GET"}),
+)))
+
+
 def _hal_get(query: str, rows: int = 200, sort: str = "producedDateY_i desc") -> list:  # pragma: no cover
     params = {"q": query, "fl": FL, "rows": rows, "sort": sort, "wt": "json"}
-    resp = requests.get(HAL_API, params=params, timeout=30)
+    resp = _SESSION.get(HAL_API, params=params, timeout=(15, 60))
     resp.raise_for_status()
     return resp.json().get("response", {}).get("docs", [])
 
