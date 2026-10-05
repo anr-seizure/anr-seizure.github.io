@@ -3,7 +3,7 @@
 lartizien:
 - title: OCSVM-Guided Representation Learning for Unsupervised Anomaly Detection
   year: 2026
-  url: https://hal.science/hal-05164029v3
+  url: https://hal.science/hal-05164029v4
   doctype: preprint
 - title: 'Scalable magnetic resonance fingerprinting: Incremental inference of high dimensional elliptical
     mixtures from large data volumes'
@@ -18,7 +18,7 @@ lartizien:
 trombetta:
 - title: OCSVM-Guided Representation Learning for Unsupervised Anomaly Detection
   year: 2026
-  url: https://hal.science/hal-05164029v3
+  url: https://hal.science/hal-05164029v4
   doctype: preprint
 - title: GAN-based synthetic FDG PET images from T1 brain MRI can serve to improve performance of deep
     unsupervised anomaly detection models
@@ -107,12 +107,11 @@ goncalves:
   year: 2026
   url: https://hal.science/hal-05514715v2
   doctype: preprint
+- title: Multiresolution Block-Coordinate Plug-and-Play Algorithm for Image Reconstruction
+  year: 2026
+  url: https://hal.science/hal-05762596v1
+  doctype: preprint
 - title: A flexible block-coordinate forward-backward algorithm for non-smooth and non-convex optimization.
   year: 2025
   url: https://inria.hal.science/hal-05337116v1
   doctype: preprint
-- title: 'En quête de précision : Un benchmark open-source et un solveur polyvalent pour le Graphical
-    Lasso'
-  year: 2025
-  url: https://hal.science/hal-05128230v1
-  doctype: conference
