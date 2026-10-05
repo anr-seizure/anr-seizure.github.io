@@ -17,12 +17,11 @@ from __future__ import annotations
 import os
 import re
 import sys
+import time
 
 try:
     import requests
     import yaml
-    from requests.adapters import HTTPAdapter
-    from urllib3.util.retry import Retry
 except ImportError as exc:  # pragma: no cover, exercised only without deps installed
     sys.stderr.write("Missing dependency: %s. Run pip install -r scripts/requirements.txt\n" % exc)
     raise
@@ -161,21 +160,38 @@ def merge_publications(existing: dict, fetched: list) -> dict:
 
 # Network helpers below are not covered by unit tests.
 
-# One shared session that retries transient failures (HAL occasionally drops connections from
-# CI runners), with a short exponential backoff so a real outage still fails within a minute.
+# One session for all the queries, so connections get reused. The retries live in _hal_get and
+# not in an HTTPAdapter, that way every attempt shows up in the CI log.
 _SESSION = requests.Session()
-_SESSION.mount("https://", HTTPAdapter(max_retries=Retry(
-    total=3, backoff_factor=2,
-    status_forcelist=(429, 500, 502, 503, 504),
-    allowed_methods=frozenset({"GET"}),
-)))
+
+# Seconds to wait between attempts. HAL was unreachable from a runner for 80 s on 2026-10-05, so
+# short waits would just use up the attempts while it is still down.
+RETRY_DELAYS = (30, 120, 300)
+# Shared by every query: if HAL dies halfway through, we give up instead of idling for an hour.
+RETRY_BUDGET = 600.0
+_retry_budget = RETRY_BUDGET
 
 
 def _hal_get(query: str, rows: int = 200, sort: str = "producedDateY_i desc") -> list:  # pragma: no cover
+    """GET one HAL query, retrying connection failures and 5xx/429 responses.
+
+    Raises the underlying requests exception once the attempts or the shared wait budget run out.
+    """
+    global _retry_budget
     params = {"q": query, "fl": FL, "rows": rows, "sort": sort, "wt": "json"}
-    resp = _SESSION.get(HAL_API, params=params, timeout=(15, 60))
-    resp.raise_for_status()
-    return resp.json().get("response", {}).get("docs", [])
+    for attempt, delay in enumerate(RETRY_DELAYS + (None,), start=1):
+        try:
+            resp = _SESSION.get(HAL_API, params=params, timeout=(15, 60))
+            resp.raise_for_status()
+            return resp.json().get("response", {}).get("docs", [])
+        except requests.RequestException as exc:
+            if delay is None or delay > _retry_budget:
+                raise
+            _retry_budget -= delay
+            sys.stderr.write("HAL request failed (attempt %d/%d): %s\n  retrying in %ds\n"
+                             % (attempt, len(RETRY_DELAYS) + 1, exc, delay))
+            sys.stderr.flush()
+            time.sleep(delay)
 
 
 def fetch_project_docs() -> list:  # pragma: no cover

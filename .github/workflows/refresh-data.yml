@@ -3,9 +3,14 @@ name: Refresh publications from HAL
 # Keeps _data/publications.yml and _data/member_pubs.yml in sync with HAL.
 # Manual entries (source: manual) and curated figure paths are preserved by the script.
 on:
+  # HAL is intermittently unreachable from GitHub runners (ConnectTimeout, see the diagnose
+  # step below).
   schedule:
     # avoid the top of the hour: GitHub's scheduler most often delays or drops those runs
     - cron: "23 6 * * 1"   # every Monday around 06:23 UTC (best effort)
+    # If the first run fails, we try again on the next day.
+    - cron: "23 6 * * 2"
+    - cron: "23 6 * * 3"
   workflow_dispatch: {}
 
 permissions:
@@ -25,7 +30,23 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Fetch from HAL
+        id: fetch
         run: python scripts/fetch_hal.py
+
+      # Captures the runner IP and trace HAL support would ask for, to tell a HAL outage apart from Azure ranges being filtered.
+      - name: Diagnose HAL unreachability
+        if: failure() && steps.fetch.outcome == 'failure'
+        continue-on-error: true
+        run: |
+          echo "runner public IP: $(curl -s --max-time 10 https://api.ipify.org || echo unknown)"
+          echo "--- DNS ---"
+          getent ahosts api.archives-ouvertes.fr || true
+          echo "--- curl (verbose, 20s) ---"
+          curl -sv --max-time 20 -o /dev/null \
+            "https://api.archives-ouvertes.fr/search/?q=*:*&rows=1&wt=json" || true
+          echo "--- traceroute ---"
+          sudo apt-get install -y -qq traceroute >/dev/null 2>&1 || true
+          traceroute -T -p 443 -w 2 -m 20 api.archives-ouvertes.fr || true
 
       - name: Commit changes if any
         run: |
