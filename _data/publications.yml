@@ -42,6 +42,15 @@ journal:
   figure: /images/publications/hal-05061806.jpg
   source: auto
 conference:
+- key: hal-05849054
+  title: 'Representation Learning for 3D Brain Imaging: A Benchmark'
+  authors: Pierre Falconnier, Robin Trombetta, Nicolas Duchateau, Carole Lartizien
+  year: 2026
+  venue: Machine Learning in Clinical Neuroimaging
+  doctype: conference
+  url: https://hal.science/hal-05849054v1
+  hal_id: hal-05849054
+  source: auto
 - key: 10.48550/arxiv.2508.12927
   title: Learning local and global prototypes with optimal transport for unsupervised anomaly detection
     and localization
