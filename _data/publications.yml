@@ -42,6 +42,16 @@ journal:
   figure: /images/publications/hal-05061806.jpg
   source: auto
 conference:
+- key: hal-05849987
+  title: 'OTLesMix: Wasserstein Barycenter and Optimal Transport Map for Synthetic Lesion Generation with
+    Diverse Shapes and Locations'
+  authors: Robin Trombetta, Carole Lartizien
+  year: 2026
+  venue: Simulation and Synthesis in Medical Imaging (SASHIMI 2026)
+  doctype: conference
+  url: https://hal.science/hal-05849987v1
+  hal_id: hal-05849987
+  source: auto
 - key: hal-05849054
   title: 'Representation Learning for 3D Brain Imaging: A Benchmark'
   authors: Pierre Falconnier, Robin Trombetta, Nicolas Duchateau, Carole Lartizien

@@ -5,29 +5,29 @@ lartizien:
   year: 2026
   url: https://hal.science/hal-05164029v4
   doctype: preprint
+- title: 'OTLesMix: Wasserstein Barycenter and Optimal Transport Map for Synthetic Lesion Generation with
+    Diverse Shapes and Locations'
+  year: 2026
+  url: https://hal.science/hal-05849987v1
+  doctype: conference
 - title: 'Representation Learning for 3D Brain Imaging: A Benchmark'
   year: 2026
   url: https://hal.science/hal-05849054v1
   doctype: conference
-- title: 'Scalable magnetic resonance fingerprinting: Incremental inference of high dimensional elliptical
-    mixtures from large data volumes'
-  year: 2026
-  url: https://hal.science/hal-04836864v2
-  doctype: journal
 trombetta:
 - title: OCSVM-Guided Representation Learning for Unsupervised Anomaly Detection
   year: 2026
   url: https://hal.science/hal-05164029v4
   doctype: preprint
+- title: 'OTLesMix: Wasserstein Barycenter and Optimal Transport Map for Synthetic Lesion Generation with
+    Diverse Shapes and Locations'
+  year: 2026
+  url: https://hal.science/hal-05849987v1
+  doctype: conference
 - title: 'Representation Learning for 3D Brain Imaging: A Benchmark'
   year: 2026
   url: https://hal.science/hal-05849054v1
   doctype: conference
-- title: GAN-based synthetic FDG PET images from T1 brain MRI can serve to improve performance of deep
-    unsupervised anomaly detection models
-  year: 2025
-  url: https://hal.science/hal-05061806v1
-  doctype: journal
 quentin:
 - title: Automated interictal epileptic spike detection from simple and noisy annotations in MEG data
   year: 2026
