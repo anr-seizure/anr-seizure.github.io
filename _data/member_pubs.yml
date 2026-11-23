@@ -91,14 +91,15 @@ borgnat:
     of gene regulatory networks
   year: 2026
   url: https://hal.science/hal-05651466v1
-  doctype: preprint
+  doctype: conference
+- title: An extension of Modular Response Analysis for global perturbations and robust connectivity inference
+    of gene regulatory networks
+  year: 2026
+  url: https://hal.science/hal-05874765v1
+  doctype: conference
 - title: An inverse problem resolution for 3D particle tracking using event-based vision
   year: 2026
   url: https://hal.science/hal-05525842v2
-  doctype: preprint
-- title: 'Inverse Laplace Transform for Dynamic Light Scattering: Impact of Regularization'
-  year: 2026
-  url: https://hal.science/hal-05647369v1
   doctype: conference
 goncalves:
 - title: Multiresolution Adaptive Block-Coordinate Forward-Backward for Image Reconstruction
